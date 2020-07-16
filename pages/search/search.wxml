@@ -1,0 +1,39 @@
+<view class='search_page'>
+  <view class='search_content' bindtap='searchPage'>
+    <image src='../../images/common/search.png' class='search_icon' bindtap='searchBtn'></image>
+    <input type='text' placeholder='请输入税务关键词' class='search_input' bindinput='changeWord' bindconfirm="searchBtn"></input>
+  </view>
+  <view class="search_cancel" bindtap='cancelPage'>取消</view>
+</view>
+<view class='search_main'>
+  <view class="search_title" wx:if="{{historyList && historyList.length>0}}">
+    搜索历史
+    <image src="../../images/common/del.png" class="del_icon" bindtap="clearHistory"></image>
+  </view>
+  <view class="word_box">
+    <view class='search_word' bindtap='changeHistory' wx:for="{{historyList}}" wx:key="{{item}}" data-content="{{item}}">{{m1.fn(item,10)}}</view>
+  </view>
+  <view class="search_title">
+    热门推荐
+  </view>
+  <view class="word_box">
+    <view wx:for="{{hotWordList}}" wx:key="{{item.hswId}}" bindtap='changeSearch'data-content="{{item.hotSearchWord}}" class="recommend_list">
+      <text class="{{index == 0 ?'firCls':(index == 1?'secCls':(index == 2?'thirdCls':'otherCls'))}}">{{index+1}}</text>
+      <text>{{m1.fn(item.hotSearchWord,8)}}</text>  
+    </view>
+    <!-- history_word -->
+    <!-- <view class='search_word' bindtap='changeSearch' wx:for="{{hotWordList}}" wx:key="{{item.hswId}}" data-content="{{item.hotSearchWord}}">{{item.hotSearchWord}}</view> -->
+  </view>
+</view>
+
+<wxs module="m1">
+  function fn(val,i) {
+    if(val.length>i){
+      return val.substring(0,i)
+    } else{
+      return val
+    }
+  }
+  module.exports.fn = fn;
+  
+</wxs>

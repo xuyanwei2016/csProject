@@ -1,0 +1,54 @@
+<!--pages/special/special.wxml-->
+<view class="special">
+  <view class="special_list" wx:for="{{specialList}}" wx:key="index" bindtap="goDetails" data-id="{{item.id}}" data-template="{{item.template}}" data-name="{{item.name}}">
+    <image src="{{urlPath}}?fileName={{item.cover}}"></image>
+    <view class="special_content">
+      <view class="special_name">{{item.name}}</view>
+      <view class="special_text">{{item.content}}</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

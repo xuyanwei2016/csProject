@@ -1,0 +1,10 @@
+<!-- 分享功能 -->
+<view class="share_box" hidden="{{!shareDialog}}">
+    <view class="share_main">
+      <canvas canvas-id="myCanvas" style="width:270px;height:450px;margin:0 auto;" bindlongtap="savePost" data-type="myCanvas"></canvas>
+    </view>
+  <view class="canvas_text" >长按图片保存或发送给朋友</view>
+  <view class="canvas_image">
+    <image src='../../images/common/delete_icon.png' class="delete_icon" bindtap="closeShare"></image>
+  </view>
+</view>

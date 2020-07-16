@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "视频详情",
+  "component": true,
+  "usingComponents": {
+    "component": "../../components/review/review",
+    "shareView": "../../components/share/share"
+  }
+}

@@ -1,0 +1,6 @@
+<view class="starSay">
+  <view class="starList" wx:for="{{subjectList}}" bindtap="subjectDetails" data-id="{{item.id}}" data-template="{{item.template}}">
+    <image src='{{imageUrl}}?fileName={{item.cover}}' class="star_icon"></image>
+    <view class="star_name">{{item.name}}</view>
+  </view>
+</view>

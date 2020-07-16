@@ -1,0 +1,3 @@
+<view class="serveDeal">
+ <rich-text nodes="{{content}}"></rich-text> 
+</view>

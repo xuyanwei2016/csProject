@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "税可知",
+  "backgroundTextStyle": "dark",
+  "component": true,
+  "usingComponents": {
+    "component": "../../components/index/index"
+  }
+}

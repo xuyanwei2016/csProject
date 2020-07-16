@@ -1,0 +1,130 @@
+/* pages/my/index.wxss */
+.myIndex_page{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #F8F8F8;
+}
+.myIndex_page .header{
+  height: 272rpx;
+  position: relative;
+  width: 100%;
+}
+.myIndex_page .header image{
+  height: 100%;
+  width: 100%
+}
+.myIndex_page .header .user_box{
+  height: 126rpx;
+  width: 126rpx;
+  position: absolute;
+  overflow:hidden;
+  top: 20rpx;
+  left: 50%;
+  margin-left: -63rpx;
+  display:block;
+}
+.myIndex_page .header .user_icon{
+  height: 126rpx;
+  width: 126rpx;
+  border-radius: 50%;
+}
+.myIndex_page .header .name{
+  font-size: 18px;
+  color: white;
+  position:absolute;
+  top: 170rpx;
+  left: 50%;
+  transform:translate(-50%,0%)
+}
+.myIndex_page .header .king{
+  position: absolute;
+  bottom: 0rpx;
+  left: 80rpx;
+  height: 36rpx;
+  width: 36rpx;
+  border-radius: 50%;
+}
+.myIndex_page .bodys{
+  padding: 30rpx 24rpx;
+  height: calc(100vh - 350rpx);
+}
+.myIndex_page .bodys .olis{
+  height: 108rpx;
+  background: white;
+  border-radius:20rpx; 
+  display: flex;
+}
+.myIndex_page .bodys .olisBox{
+  background: white;
+  margin-top: 20rpx;
+  border-radius:20rpx;
+  overflow: hidden;
+}
+.myIndex_page .bodys .iconsBox{
+  width: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myIndex_page .bodys .iconsBox image{
+  height: 54rpx;
+  width: 54rpx;
+  margin-right: 24rpx;
+}
+.myIndex_page .bodys .box{
+  line-height: 108rpx;
+  font-size: 16px;
+}
+.myIndex_page .bodys .wordsBox{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.myIndex_page .bodys .date,.phone{
+  color: #999999;
+  font-size: 12px;
+  line-height: 108rpx;
+  margin-right: 0;
+}
+
+.myIndex_page .bodys .nextImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.myIndex_page .bodys .nextImg image{
+  height: 24rpx;
+  width: 14rpx;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+.myIndex_page .bodys .olisBox .wordsBox{
+  border-bottom: 1px solid #EEEEEE;
+}
+.myIndex_page .wxBtn {
+  border: none !important;
+  background: none !important;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  flex-direction: row;
+}
+.myIndex_page .wxBtn::after {
+  width: 0 !important;
+  height: 0 !important;
+}
+.phone {
+  position: fixed;
+  right: 94rpx;
+}
+.myIndex_page .myExit {
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 16px;
+  color: #2A6AD7;
+}

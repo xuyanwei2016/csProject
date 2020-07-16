@@ -1,0 +1,122 @@
+.post_body{
+  background: #F8F8FA;
+  width: 100%;
+  min-height: 100vh;
+}
+/* post_title */
+.post_title{
+  background: #fff;
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  color:#333333;
+  margin-bottom: 20rpx;
+}
+.post_title text{
+  float: left;
+  margin-left: 40rpx;
+  margin-right: 70rpx;
+}
+.post_title input{
+  float: left;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.phcolor{
+  color: #C7C7C7;
+}
+/* textarea */
+.post_content{
+  height: 370rpx;
+  background: #fff;
+  padding: 36rpx 30rpx 25rpx 40rpx;
+  margin-bottom: 20rpx;
+}
+.post_content textarea{
+  width: 100%;
+  height: 90%;
+}
+.text_length{
+  width: 100%;
+  text-align: right;
+  color: #C7C7C7;
+  font-size: 12px;
+}
+/* image */
+.post_image{
+  padding: 48rpx 40rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.post_image_title{
+  color: #333333;
+  font-weight:500;
+  font-size: 15px;
+  margin-bottom: 30rpx;
+}
+.post_img_box{
+  height: 200rpx;
+  width:  200rpx;
+  float: left;
+  border: dotted 1px #ebebeb;
+  margin-right: 20rpx;
+  position: relative;
+}
+.post_img_box:last-child{
+  margin-right: 0;
+}
+.post_img{
+  height: 200rpx;
+  width:  200rpx;
+  float: left;
+}
+.post_close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 26rpx;
+  width: 26rpx;
+}
+.post_upload{
+  height: 210rpx;
+  width:  210rpx;
+  float: left;
+  border: dotted 1px #ebebeb;
+  text-align: center;
+  line-height: 210rpx;
+  font-size: 100rpx;
+  color: #C9C6C9;
+  font-weight: bold;
+  position: relative;
+}
+.post_upload::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 50px;
+  margin-left: -5px;
+  margin-top: -25px;
+  border-left: 5px solid;
+}
+.post_upload::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -5px;
+  border-top: 5px solid;
+}
+.post_btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  background:linear-gradient(90deg,rgba(45,179,249,1) 0%,rgba(76,123,244,1) 100%);
+  border-radius:40rpx;
+  text-align: center;
+  color: #fff;
+  margin: 0 10%;
+  margin-top: 88rpx;
+}

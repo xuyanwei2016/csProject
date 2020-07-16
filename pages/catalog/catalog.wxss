@@ -1,0 +1,54 @@
+/* pages/catalog/catalog.wxss */
+#catalog_page{
+  margin: 0 24rpx;
+}
+
+#catalog_page .instro{
+  padding: 40rpx 0 46rpx;
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+#catalog_page  .cover{
+  height: 110rpx;
+  width: 82rpx;
+  margin-right: 24rpx;
+}
+
+#catalog_page .name{
+  color: #212020;
+  margin-bottom: 20rpx;
+}
+
+#catalog_page .author{
+  color: #818389;
+  font-size: 14px;
+}
+
+#catalog_page .catalogList{
+  height: 96rpx;
+  line-height: 96rpx;
+  color: #212020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+#catalog_page .lock{
+  width: 24rpx;
+  height: 28rpx;
+}
+#catalog_page .txt{
+  margin-right: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+#catalog_page .marginR{
+  padding-left: 36rpx;
+}
+
+#catalog_page .gray{
+  color: #C8CAD2;
+}

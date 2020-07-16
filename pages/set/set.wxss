@@ -1,0 +1,42 @@
+/* pages/set/set.wxss */
+#set_page{
+  padding: 0 26rpx;
+}
+#set_page .olist{
+  height: 106rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #eee;
+  color: 202021;
+}
+#set_page .next{
+  height: 24rpx;
+  width: 14rpx;
+}
+#set_page .logout{
+  width:600rpx;
+  height:80rpx;
+  background:rgba(230,230,230,1);
+  border-radius:40px;
+  margin: 0 auto;
+  line-height: 80rpx;
+  text-align: center;
+  color: #BDC2CB;
+  margin-top: 273rpx;
+}
+#set_page .share{
+  width: 100%;
+  margin: 0;
+  background: none;
+  height: 106rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  font-size: 16px;
+
+}
+button::after {
+  border: none;
+}

@@ -1,0 +1,22 @@
+<!--pages/book/book.wxml-->
+<view id="book_page">
+  <view wx-if="{{pageList&&pageList.length>0}}">
+    <view class="collect_list {{item.isTouchMove ? 'touch-move-active' : ''}}" 
+      bindtap="toDetails" data-id="{{item.objectId}}" data-type="{{item.objectType}}"
+      data-index="{{index}}" bindtouchstart="touchstart" 
+      bindtouchmove="touchmove" wx:for="{{pageList}}" wx:key="index">
+      <view class='content' data-index="{{index}}">
+        <view class="collect_left">
+          <image class='collect_cover' src="{{urlPath}}?fileName={{item.cover}}" wx:if="{{item.cover}}"></image>
+          <image class='collect_cover' src="../../images/course/cover.png" wx:else></image>
+        </view>
+        <view class="collect_text">{{item.name}}</view>
+      </view>
+      <view class="del" catchtap="del"  data-id="{{item.objectId}}" data-type="{{item.objectType}}">删除</view>
+    </view>
+  </view>
+  <view wx-if="{{(!pageList || pageList.length<=0) && !loading}}" class="resource_null">
+    <image src="../../images/resource/null.png" class="null_image"></image>
+    <view class="null_tips">您还没有收藏过资源哦</view>
+  </view>
+</view>

@@ -1,0 +1,174 @@
+.discover_sort{
+  width: 100%;
+  background: url('http://www.zgsccbs.com/skz/program/discover_bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding-bottom: 30rpx;
+
+}
+/* search */
+.discover_input{
+  width: 94%;
+  margin: 10rpx 3% 34rpx;
+  background: #fff;
+  border-radius:37rpx;
+  height: 74rpx;
+  font-size: 14px;
+}
+.discover_input input{
+  height: 74rpx;
+  line-height: 70rpx;
+  float: left;
+  margin-left: 16rpx;
+  border: none;
+}
+.discover_input .search_image{
+  height: 30rpx;
+  width: 30rpx;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 22rpx;
+}
+/* nav */
+.discover_nav{
+  height: 250rpx;
+  background: #fff;
+  box-shadow:0px 3px 13px 0px rgba(153, 153, 153, 0.35);
+  border-radius:10rpx;
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 37rpx;
+}
+.nav_list{
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin-top: 40rpx;
+  box-sizing: border-box;
+}
+.nav_list:first-child{
+  border-right: solid 1px #EBEBEB;
+}
+.nav_list .nav_img{
+  width: 90rpx;
+  height: 90rpx;
+}
+.nav_list .nav_text{
+  color: #333333;
+  font-size: 14px;
+  margin-top: 5rpx;
+  font-weight:500;
+}
+.nav_list .nav_num{
+  color: #BDC1CB;
+  font-weight:500;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.discover_tab{
+  margin-top: 20rpx;
+  display: inline-block;
+  line-height: 100rpx;
+  margin-left: 32rpx;
+}
+.tab_name{
+  color: #666666;
+  font-weight:500;
+  font-size: 15px;
+  margin-right: 48rpx;
+}
+.hover_tab{
+  color: #222222;
+  font-weight:bold;
+  font-size: 20px;
+}
+.discover_list{
+  margin: 0 30rpx;
+}
+.components_list{
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.components_wrap{
+  display: flex;
+}
+.components_left{
+  flex: 1;
+}
+.components_image{
+  width: 200rpx;
+  margin-left: 48rpx;
+}
+.components_image image{
+  width: 200rpx;
+  height: 150rpx;
+}
+.components_title{
+  width: 100%;
+  font-size: 16px;
+  color: #222222;
+  font-weight: bold;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+}
+.components_text_style{
+  color: #FF6E02;
+}
+.components_bottom{
+  font-size: 12px;
+  color: #BDC1CB;
+  margin-top: 60rpx;
+  overflow: hidden;
+}
+.components_bottom .components_browse{
+  float: right;
+}
+.browse_icon{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 7rpx; 
+}
+.discover_send{
+  width:86rpx;
+  height:86rpx;
+  background:linear-gradient(135deg,rgba(245,202,37,1) 0%,rgba(253,157,11,1) 100%);
+  box-shadow:0px 3px 7px 0px rgba(240,160,24,0.45);
+  border-radius:50%;
+  text-align: center;
+  line-height: 86rpx;
+  color: #fff;
+  font-size: 13px;
+  font-weight:500;
+  position: fixed;
+  bottom: 40rpx;
+  right: 50rpx;
+}
+/* 底线 */
+.discover_over{
+  margin: 35rpx auto 44rpx;
+  color: #D5D7E0;
+  font-size: 12px;
+  font-weight:500;
+  line-height: 40rpx;
+  text-align: center;
+}
+/* 暂无推荐 */
+.review_nullBox{
+  text-align: center;
+  margin-top: 100rpx;
+}
+.review_nullIcon{
+  height: 252rpx;
+  width: 282rpx;
+  margin: 40rpx 31%;
+}
+.review_nullText{
+  color: #BDC2CB;
+  font-weight: 500;
+  margin-bottom: 40rpx;
+}

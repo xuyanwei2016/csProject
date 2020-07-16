@@ -1,0 +1,5 @@
+<!--pages/zcAgreement/zcAgreement.wxml-->
+<view id="page_agree">
+  <rich-text class="agreement" nodes="{{agreement}}"></rich-text>
+</view>
+

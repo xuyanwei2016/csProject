@@ -1,0 +1,36 @@
+<view class='resource_body'>
+  <view class='header_box'>
+    <view class='search_box'>
+      <view class='search_content' bindtap='searchPage'>
+        <image src='../../images/common/search.png' class='search_icon'></image>
+        <text style="{{inputValue?'color:#000':''}}">{{inputValue?inputValue:'请输入关键词'}}</text>
+      </view>
+    </view>
+    <view class="nav_box">
+      <scroll-view class="nav_content" scroll-x="true" style="width: 100%">
+        <view wx:for="{{resourceList}}" wx:for-index="key"  wx:for-item="value" wx:key="{{value}}" 
+          bindtap="resourceTap" class="nav_name" data-index="{{key}}">
+          <text class="{{key == listQuery.resourceType?'nav_hover':'' }}">{{value}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='filter_box'>
+    <view class="filter_text {{searchType == 1?'filter_hover':''}}" bindtap='setDataList' data-index="1" data-name="">默认</view>
+    <view class="filter_text {{searchType == 2?'filter_hover':''}}" bindtap="setDataList" data-index="2" data-name="browseNum desc">最热</view>
+    <view class="filter_text {{searchType == 3?'filter_hover':''}}" bindtap="setDataList" data-index="3" data-name="uploadTime desc">最新</view>
+    <view class="filter_text last_filter" bindtap='bindFilter' wx:if="{{listQuery.resourceType != 0}}">
+      <text>筛选</text>
+      <image src='../../images/common/filter.png' class='filter_icon'></image>
+    </view>
+  </view>
+  <view class='total_resource' wx:if="{{totalCount==null}}">为您找到0条资源</view>
+  <view class='total_resource' wx:else>为您找到{{totalCount}}条资源</view>
+</view>
+<view class='resource_main'>
+  <component pageList="{{pageList}}" isLast="{{isLast}}" isNull="{{isNull}}"/>
+</view>
+
+
+
+

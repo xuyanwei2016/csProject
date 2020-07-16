@@ -1,0 +1,51 @@
+<view class='body_box'>
+  <view class='main_box'>
+    <view class="tab_nav {{version == 'old'?'hover_nav':''}}" bindtap='changeTab' data-type="old">
+      旧版本(3500起征)
+      <view class='bottom_line' wx:if="{{version == 'old'}}"></view>
+    </view>
+    <view class="tab_nav {{version != 'old'?'hover_nav':''}}" bindtap='changeTab' data-type="new">
+      新版(5000起征)
+      <view class='bottom_line' wx:if="{{version != 'old'}}"></view>
+    </view>
+    <view class='box_title'>税前工资</view>
+    <input placeholder='请输入税前工资' class='money' bindinput="changeMoney" type='digit'></input>
+    <view class='box_title'>五险一金</view>
+    <input placeholder='请输入五险一金' class='money' bindinput="changeInsurance" type='digit'></input>
+    <view class='calculator_top'>
+      <view class='calculator_title'>
+        <view class='calculator_left'>应纳所得额</view><view class='calculator_right'>{{firMoney}}</view>
+      </view>
+      <view class='calculator_title'>
+        <view class='calculator_left'>速算扣除数</view><view class='calculator_right'>{{taxMoney}}</view>
+      </view>
+      <view class='calculator_title'>
+        <view class='calculator_left'>税率</view><view class='calculator_right'>{{tax}}%</view>
+      </view>
+      <view class='calculator_title'>
+        <view class='calculator_left'>应缴税款</view><view class='calculator_right'>{{lastMoney}}</view>
+      </view>
+    </view>
+    <view class='real_price'>
+      <view class='real_left'>实发工资</view>
+      <view class='real_right'>{{num}}</view>
+    </view>
+  </view>
+  <view class='table_box'>
+    <view class='tbale_th'>
+      <view class='table_fir'>级数</view>
+      <view class='table_sec'>应纳税得额</view>
+      <view class='table_third'>税率</view>
+      <view class='table_forth'>速算扣除数</view>
+    </view>
+    <view class='tbale_td' wx:for="{{list}}" wx:key="{{index}}">
+      <view class='table_fir'>{{index+1}}</view>
+      <view class='table_sec'>{{item.text}}</view>
+      <view class='table_third'>{{item.num}}</view>
+      <view class='table_forth'>{{item.otherNum}}</view>
+    </view>
+  </view>
+  <view class='tip_box'><text>应纳所得额</text>＝税前工资－起征点－五险一金</view>
+  <view class='tip_box'><text>应纳税款</text>＝应纳所得税*税率－速算扣除数</view>
+  <view class='tip_box'><text>实发工资</text>＝税前工资－五险一金－应纳税款</view>
+</view>

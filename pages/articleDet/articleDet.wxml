@@ -1,0 +1,75 @@
+<view class='course_details'>
+  <view class='course_main'>
+    <view class='course_name'>{{pageData.name}}</view>
+    <view class='course_con'>
+      <view class='chapter_box' wx:if="{{pageData.source}}">{{pageData.source}}</view>
+      <view class='browse_box'>
+        <image src='../../images/common/browser.png' class='browser_icon'></image>{{pageData.browseNum }}
+      </view>
+    </view>
+    <!-- <view class='course_audio'>
+      <audio src='{{imageUrl}}?fileName={{pageData.audio}}' controls class='audio'></audio>
+      <view class='audio_dialog' wx:if="{{pageData.messageCode}}" bindtap='videTap'></view>
+    </view> -->
+    <view class='course_audio' wx:if="{{pageData.audio}}">
+        <view><slider color='#F5F6F8' activeColor='#5AA0FF' value='{{audioTime}}' 
+          bindchange='sliderChange' block-size='8px'></slider></view>
+        <view class='audio_time'>{{showTime1}}/{{showTime2}}</view>
+        <view class="audio_icons">
+          <image src='../../images/article/back.png' class='back_icon' bindtap="backBtn"></image>
+          <image src='../../images/article/prev.png' class='next_icon'></image>
+          <image src='../../images/resource/bf.png' class='bf_icon' wx:if="{{isPlayAudio}}" catchtap='playAudio'></image>
+          <image src='../../images/resource/zt.png' class='bf_icon' wx:else catchtap='playAudio'></image>
+          <image src='../../images/article/next.png' class='next_icon'></image>
+          <image src='../../images/article/forward.png' class='forward_icon' bindtap="towardBtn"></image>
+        </view>
+        <view class='audio_dialog' wx:if="{{pageData.messageCode}}" bindtap='videTap'></view>
+      </view>
+    <view class='detail_content'>
+      <rich-text nodes="{{content}}"></rich-text>
+      <view class='detail_pay' wx:if="{{pageData.messageCode == 2}}"></view>
+    </view>
+    <view class='pay_box' bindtap="bayBtn" wx:if="{{pageData.messageCode == 1}}">试读结束，登录后免费看</view>
+    <view class='pay_box' bindtap="bayBtn" wx:if="{{pageData.messageCode == 2}}">试读结束，开通VIP会员免费看</view>
+    <view class="course_cover" wx:if="{{pageData.video}}">
+      <video src='{{imgPath}}file{{videoSrc}}/index.m3u8' controls class='cover'
+        title="{{pageData.name}}" id='myVideo' poster="{{poster}}">
+      </video>
+      <view class='course_dialog' wx:if="{{pageData.messageCode}}" bindtap='videTap'></view>
+    </view>
+  </view>
+  <!-- 推荐 -->
+  <view class='recommend_main'>
+    <view class='recommend_title'>相关推荐</view>
+    <view class='components_list_item' wx:for="{{relationData}}" wx:key="{{item.index}}" bindtap="goDetails" data-id="{{item.id}}">
+      <view class="components_wrap">
+        <view class="components_left">
+          <view class='components_title'>{{item.name}}</view>
+          <view class='components_synopsis' wx:if="{{item.text}}">{{item.text}}</view>
+          <view class='components_bottom'>
+            <text class="components_date">{{item.uploadTime}}</text>
+            <text class="components_browse">共{{item.browseNum>9999?"1万+":item.browseNum}}次浏览</text>
+          </view>
+        </view>
+        <view class="components_image" wx:if="{{item.img}}">
+          <image src="{{imageUrl}}?fileName={{item.img}}"></image>
+        </view>
+        <view class="components_image" wx:elif="{{item.imgSrc}}">
+          <image src="{{item.imgSrc}}"></image>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!relationData || relationData.length == 0}}" class="review_nullBox">
+      <image src='../../images/resourceDetails/review.png' class='review_nullIcon'></image>
+      <view class="review_nullText">暂无推荐</view>
+    </view>
+    <view class='recommend_over' wx:if="{{relationData && relationData.length>= 10}}">—— 这是我的底线 ——</view>
+  </view>
+  <!-- 开通VIP会员弹窗 -->
+  <dialog id="dialog"></dialog>
+  <!-- pdf -->
+  <view class="pdf_box" wx:if="{{pageData.isPdf == 1}}" bindtap="articlePdf" data-id="{{pageData.pdfPath}}">
+    <view class="pdf_top">查看</view>
+    <view>PDF</view>
+  </view>
+</view>

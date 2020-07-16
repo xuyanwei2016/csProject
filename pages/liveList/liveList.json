@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "直播课",
+  "navigationBarBackgroundColor": "#F8F8F8",
+  "navigationBarTextStyle": "black",
+  "component": true,
+  "usingComponents": {
+    "listNull": "../../components/listnull/listnull"
+  }
+}

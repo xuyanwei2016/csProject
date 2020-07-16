@@ -1,0 +1,26 @@
+<view class="order_page">
+  <view wx:if="{{orderList && orderList.length>0}}">
+    <view class="order_list" wx:for="{{orderList}}" wx:key="{{index}}">
+      <view class="order_top">
+        <text>{{item.createTime}}</text>
+        <text class="order_status">{{item.statusZh}}</text>
+      </view>
+      <view class="order_details">
+        <view class="order_left">
+          <image class='order_cover' src="../../images/my/cover.png" wx:if="{{item.orderType == 1}}"></image>
+          <image class='order_cover' src="{{otherImageUrl}}?fileName={{item.cover}}" wx:elif="{{item.orderType != 1 && item.cover}}"></image>
+          <image class='order_cover' src="../../images/course/cover.png" wx:else></image>
+        </view>
+        <view class="order_right">{{item.name}}</view>
+      </view>
+      <view class="order_bottom">
+        <view class="order_price">实付款：<text>￥{{item.payment}}</text></view>
+        <view class="order_btn" bindtap='orderDet' data-id='{{item.id}}' data-type='{{item.orderType}}'>查看详情</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="resource_null">
+    <image src="../../images/resource/null.png" class="null_image"></image>
+    <view class="null_tips">暂无订单</view>
+  </view>
+</view>

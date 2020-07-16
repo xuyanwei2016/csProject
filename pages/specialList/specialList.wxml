@@ -1,0 +1,68 @@
+<view class="special_template">
+  <view class="special_img">
+    <!-- <image class="special_temImg" src="../../images/common/listImgBg.png"></image> -->
+    <image class="special_temImg" src="{{urlPath}}?fileName={{special.appBgImg}}"></image>
+    
+  </view>
+  <view class="special_temNav">
+    <scroll-view class="special_scroll" scroll-x="true" bindscroll="scroll" style="width:100%;">
+      <view class="special_scroll_item" wx:for="{{navList}}" wx:key="{{item.index}}" bindtap="specialTap" data-id="{{item.id}}">
+        <text class="{{item.id==selectId?'special_nav_hover':'special_nav'}}">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="special_temMain">
+    <view wx:if="{{mainList&&mainList.length>0}}">
+      <view wx:for="{{mainList}}" wx:key="{{item.index}}" >
+        <!-- 文章列表 -->
+        <view class="special_temList special_article" wx:if="{{item.resouresClass >=31 && item.resouresClass <=35}}" bindtap="toDetails" data-id="{{item.resouresId}}" data-type="{{item.resouresClass}}" data-name="{{item.resouresName}}">
+          <view class="special_temListImg" wx:if="{{item.img}}">
+            <image src="{{urlPath}}?fileName={{item.img}}" class="special_article_icon"></image>
+          </view>
+          <view class="special_temListRight">
+            <view class="special_temListName">{{item.resouresName}}</view>
+            <view class="special_temListSyno" wx:if="{{item.synopsis}}">{{item.synopsis}}</view>
+            <view class="special_temListBro">
+              <image src="../../images/common/browser.png" class="special_browser_icon"></image>
+              <text class="special_browser_text">{{item.browseNum}}次阅读</text>
+            </view>
+          </view>
+        </view>
+        
+        <!-- 图书列表 -->
+        <view class="special_temList special_book" wx:elif="{{item.resouresClass == 1}}" bindtap="toDetails" data-id="{{item.resouresId}}" data-type="{{item.resouresClass}}">
+          <view class="special_temBookImg" wx:if="{{item.img}}">
+            <image src="{{urlPath}}?fileName={{item.img}}" class="special_book_icon"></image>
+          </view>
+          <view class="special_temListRight">
+            <view class="special_temListName">{{item.resouresName}}</view>
+            <view class="special_temListBook" wx:if="{{item.author}}">{{item.author}}</view>
+            <view class="special_temListSyno" wx:if="{{item.synopsis}}">{{item.synopsis}}</view>
+          </view>
+        </view>
+
+        <!-- 微课列表 -->
+        <view class="special_temList special_class" wx:if="{{item.resouresClass == 2}}" bindtap="toDetails" data-id="{{item.resouresId}}" data-name="{{item.resouresName}}" data-type="{{item.resouresClass}}">
+          <view class="special_temClassImg" wx:if="{{item.img}}">
+            <image src="{{urlPath}}?fileName={{item.img}}" class="special_class_icon"></image>
+          </view>
+          <view class="special_temClassImg" wx:elif="{{item.imgPath}}">
+            <image src="{{imgPath}}{{item.imgPath}}/1.jpg" class="special_class_icon"></image>
+          </view>
+          <view class="special_temListRight">
+            <view class="special_temListName">{{item.resouresName}}</view>
+            <view class="special_temListSyno" wx:if="{{item.synopsis}}">{{item.synopsis}}</view>
+            <view class="special_temListBro">
+              <image src="../../images/common/browser.png" class="special_browser_icon"></image>
+              <text class="special_browser_text">{{item.browseNum}}人学习过</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="special_no" wx:else>
+      <image class="no_con" src="../../images/common/no_content.png"></image>
+      <view class="no_text">抱歉，目前暂无内容哦~</view>
+    </view>
+  </view>
+</view>

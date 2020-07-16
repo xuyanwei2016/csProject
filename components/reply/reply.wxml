@@ -1,0 +1,92 @@
+<view class='{{replyHide?"noscroll":""}}'>
+<view class="review_list">
+  <view class="review_topBox">
+    <image src='{{urlPath}}?fileName={{info.userImg}}' class='header' wx:if="{{info.userImg}}"></image>
+    <image src='../../images/resourceDetails/header.png' class="header" wx:else></image>
+    <text class="name">{{info.userName}}</text>
+    <view class="start_box">
+      <image src='../../images/common/start.png' 
+        class='start' wx:for="{{defaultData}}" 
+        wx:for="{{defaultData}}"
+        wx:for-item="oItem"
+        wx:for-index="oIndex"
+        wx:key="{{oIndex}}"
+        wx:if="{{oItem.index <= info.score}}">
+      </image>
+    </view>
+  </view>
+  <view class="review_intro">{{info.content}}</view>
+  <view class="review_bottom">
+    <text>{{info.formatReleaseTime}}</text>
+    <view class="fav_content">
+      <image src='../../images/common/support_hover.png' class="fav_icon" wx:if="{{info.isAgree == 1}}"></image>
+      <image src='../../images/common/support.png' class="fav_icon" wx:else 
+        bindtap="favListBtn" data-id="{{info.id}}" data-type="{{info.resourceType}}"></image>
+      {{info.fabulousNum}}
+    </view>
+    <view class="review_content"><image src='../../images/common/review_icon.png' class="review_icon" bindtap="handleReply"></image>{{info.replyNum}}</view>
+  </view>
+</view>
+<!-- border_box -->
+<view class="border"></view>
+<!-- 回复列表 -->
+<view class="father_box">
+  <view class="review_list list_box" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="review_topBox">
+      <image src='{{urlPath}}?fileName={{item.userImg}}' class='header' wx:if="{{item.userImg}}"></image>
+      <image src='../../images/resourceDetails/header.png' class="header" wx:else></image>
+      <text class="name">{{item.userName}}<text wx:if="{{item.fatherId != replyQuery.oid }}"><text class='reply_text'>回复</text>{{item.fatherName}}</text></text>
+    </view>
+    <view class="review_intro">{{item.content}}</view>
+    <view class="review_bottom">
+      <text>{{item.formatReleaseTime}}</text> 
+      <view class="review_content" bindtap="reviewIcon" data-name="{{item.userName}}" data-id="{{item.id}}">
+        <image src='../../images/common/review_icon.png' class="review_icon"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 回复input -->
+<view class="comments_box" style='padding-bottom:{{ isIphoneX ? 34 : 0 }}px;' wx:if="{{!replyHide}}">
+  <!-- <input type="text" placeholder='内容这么赞，快来评论吧！' 
+    placeholder-class="placeholder" 
+    maxlength="300" 
+    value="{{content}}"
+    bindinput="changeReview" 
+    focus="{{focus}}"
+    class="comments_input" bindconfirm="replyBtn">
+  </input> -->
+  <view class='comments_input' bindtap='replyInput'>回帖参与讨论</view>
+</view>
+<view class='post_reply' wx:if="{{replyHide}}">
+  <view class='post_box'>
+    <view class='post_box_icon'>
+      <image src="../../images/common/delete.png" class='del_icon' bindtap='hideBox'></image>
+    </view>
+    <textarea auto-focus maxlength="300" fixed="true" bindinput='changeReview' 
+      hold-keyboard="true" adjust-position="true" cursor-spacing="200"
+      placeholder="{{faName?'回复'+faName:''}}"></textarea>
+    <view class='reply_box'><view class='reply_btn' bindtap='sendMsg'>发送</view></view>
+  </view>
+</view>
+</view>
+<!-- 回复弹窗 -->
+<!-- <view class='toast_box' wx:if="{{dialog}}">
+    <view class='toastbg'></view>
+    <view class='showToast'>
+        <view class='toast_title'>
+            <text>回复</text>
+        </view>
+        <view class='toast_main'>
+          <textarea placeholder="请输入评价内容..." placeholder-style="color:#AAABB3;" maxlength="300" bindinput="changeReview" auto-focus="true"/>
+        </view>
+        <view class='toast_button'>
+          <view class='button1'>
+              <button catchtap='cancelBtn'>取消</button>
+          </view>
+          <view class='button2'>
+              <button catchtap='replyBtn'>确定</button>
+          </view>
+        </view>
+    </view>
+</view> -->

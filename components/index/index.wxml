@@ -1,0 +1,23 @@
+<view class='components_list'>
+  <view class='components_list_item' wx:for="{{dataList}}" wx:key="{{item.index}}" bindtap="goDetails" data-id="{{item.id}}">
+    <view class="components_wrap">
+      <view class="components_left">
+        <view class='components_title'>{{item.name}}</view>
+        <view class='components_synopsis'>{{item.text}}</view>
+        <view class='components_bottom'>
+          <text class="components_date">{{item.uploadTime}}</text>
+          <text class="components_browse">共{{item.browseNum>9999?"1万+":item.browseNum}}次浏览</text>
+        </view>
+      </view>
+      <view class="components_image" wx:if="{{item.img}}">
+        <!-- <image src='../../images/index/test.png'></image> -->
+        <image src="{{urlPath}}?fileName={{item.img}}"></image>
+      </view>
+      <view class="components_image" wx:elif="{{item.imgSrc}}">
+        <!-- <image src='../../images/index/test.png'></image> -->
+        <image src="{{item.imgSrc}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+

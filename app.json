@@ -1,0 +1,93 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/audioDet/audioDet",
+        "pages/addReview/addReview",
+        "pages/comments/comments",
+        "pages/label/label",
+        "pages/labelReview/labelReview",
+        "pages/labelDetails/labelDetails",
+        "pages/special/special",
+        "pages/specialDetails/specialDetails",
+        "pages/specialList/specialList",
+        "pages/resource/resource",
+        "pages/search/search",
+        "pages/filter/filter",
+        "pages/articleDet/articleDet",
+        "pages/pdfRead/pdfRead",
+        "pages/liveList/liveList",
+        "pages/liveDet/liveDet",
+        "pages/livePayment/livePayment",
+        "pages/course/course",
+        "pages/courseDet/courseDet",
+        "pages/courseFree/courseFree",
+        "pages/courseExcellent/courseExcellent",
+        "pages/courseSeries/courseSeries",
+        "pages/courseList/courseList",
+        "pages/videoDet/videoDet",
+        "pages/discover/discover",
+        "pages/postDet/postDet",
+        "pages/sendPost/sendPost",
+        "pages/anwser/anwser",
+        "pages/starSay/starSay",
+        "pages/calculator/calculator",
+        "pages/aboutUs/aboutUs",
+        "pages/login/login",
+        "pages/register/register",
+        "pages/feedback/feedback",
+        "pages/zcAgreement/zcAgreement",
+        "pages/serveDeal/serveDeal",
+        "pages/set/set",
+        "pages/my/index",
+        "pages/member/member",
+        "pages/myorder/myorder",
+        "pages/orderDetails/orderDetails",
+        "pages/mycourse/mycourse",
+        "pages/mycollect/mycollect",
+        "components/list/resource",
+        "components/review/review",
+        "components/index/index",
+        "components/reply/reply",
+        "components/listnull/listnull",
+        "components/title/title",
+        "components/dialog/dialog"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+    },
+    "resizable": true,
+    "tabBar": {
+        "position": "bottom",
+        "color": "#C8CAD2",
+        "selectedColor": "#2A6AD7",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/index/home.png",
+                "selectedIconPath": "images/index/home_hover.png"
+            },
+            {
+                "pagePath": "pages/course/course",
+                "text": "课程",
+                "iconPath": "images/index/course.png",
+                "selectedIconPath": "images/index/course_hover.png"
+            },
+            {
+                "pagePath": "pages/discover/discover",
+                "text": "发现",
+                "iconPath": "images/index/find.png",
+                "selectedIconPath": "images/index/find_hover.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "我的",
+                "iconPath": "images/index/personal.png",
+                "selectedIconPath": "images/index/personal_hover.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

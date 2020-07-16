@@ -1,0 +1,100 @@
+.search_page{
+  height: 88rpx;
+  display: flex;
+  margin-top: 30rpx;
+  overflow: hidden;
+}
+.search_page .search_content{
+  height: 66rpx;
+  background: #fff;
+  flex:1;
+  border-radius:33rpx;
+  display: flex;
+  margin: 0 30rpx;
+  background: #F2F2F2;
+}
+.search_page .search_input{
+  flex:1;
+  height: 66rpx;
+  display: inline-block;
+  font-size: 14px;
+}
+.search_page .search_icon{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin: 20rpx;
+}
+/* input---placeholder---webkit */
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #B4B9C3;
+}
+.search_page .search_cancel{
+  font-weight:500;
+  color: #333333;
+  line-height: 66rpx;
+  margin-right: 32rpx;
+  font-size: 15px;
+}
+.search_main{
+  padding: 0 24rpx;
+}
+.search_title{
+  font-size: 15px;
+  color:#333;
+  font-weight:bold;
+  margin-top: 46rpx;
+  clear: both;
+}
+.search_title .del_icon{
+  height: 32rpx;
+  width: 32rpx;
+  float: right;
+  margin-right: 24rpx;
+}
+.word_box{
+  margin-top: 30rpx;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 80rpx;
+}
+.word_box .history_word{
+  padding: 20rpx 28rpx;
+  border: solid 1px #E2E2E2;
+  border-radius:6px;
+  margin-right: 24rpx;
+  margin-bottom: 26rpx;
+  float: left;
+}
+.word_box .search_word{
+  padding: 20rpx 28rpx;
+  color: #555;
+  background: #F3F3F3;
+  border-radius:6px;
+  margin-right: 24rpx;
+  margin-bottom: 26rpx;
+  float: left;
+}
+.word_box .recommend_list{
+  line-height: 75rpx;
+  color: #333333;
+  font-weight:500;
+  font-size: 14px;
+}
+.word_box text{
+  margin-right: 18rpx;
+  font-size: 16px;
+  font-weight:500;
+}
+.firCls{
+  color: #FF4713;
+}
+.secCls{
+  color: #F86442
+}
+.thirdCls{
+  color: #EC8710
+}
+.otherCls{
+  color: #AAAAAA;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的VIP会员",
+  "navigationBarBackgroundColor": "#2D2A2D",
+  "navigationBarTextStyle": "white",
+  "component": true,
+  "usingComponents": {
+    "component": "../../components/index/index"
+  }
+}

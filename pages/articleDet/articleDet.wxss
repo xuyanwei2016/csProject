@@ -1,0 +1,271 @@
+.course_details{
+  /* padding-bottom: 103rpx; */
+}
+.course_name{
+  font-size:18px;
+  font-weight:bold;
+  color:#121212;
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  margin-right: 34rpx;
+}
+.detail_content{
+  margin-top: 50rpx;
+  font-size: 14px;
+  position: relative;
+}
+.course_main{
+  padding: 32rpx 25rpx 48rpx;
+  border-bottom: solid 14rpx #F5F5F5;
+}
+.detail_pay{
+  height: 145rpx;
+  background:linear-gradient(0deg,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.pay_box{
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 480rpx;
+  margin: 0 auto;
+  border-radius:6rpx;
+  color: #FF6E02;
+  border: 2rpx solid#F66B25;
+  margin-top: 22rpx;
+  font-size: 14px;
+  text-align: center;
+}
+/* 章节 */
+.course_con{
+  overflow: hidden;
+  color: #BDC1CB;
+  margin-top: 35rpx;
+  font-weight:500;
+  font-size: 13px;
+  padding-bottom: 38rpx;
+}
+.chapter_box{
+  float: left;
+}
+.browse_box{
+  float: right;
+}
+.browser_icon{
+  width: 25rpx;
+  height: 20rpx;
+  margin-right: 5rpx;
+}
+/* audio */
+.course_audio{
+  position: relative;
+  width: 100%;
+  height: 180rpx;
+}
+audio{
+  width: 100%;
+  height: 130rpx;
+}
+.audio_dialog{
+  position: absolute;
+  height: 180rpx;
+  width: 100%;
+  left: 0;
+  top:0;
+}
+/* video */
+.course_cover{
+  height: 480rpx;
+  width: 100%;
+  position: relative;
+  margin-top: 30rpx;
+}
+.course_dialog{
+  position: absolute;
+  height: 480rpx;
+  width: 100%;
+  left: 0;
+  top:0;
+}
+.cover{
+  height: 480rpx;
+  width: 100%;
+}
+/* 推荐 */
+.recommend_main{
+  margin: 0 30rpx;
+}
+.recommend_title{
+  color: #222;
+  font-weight:bold;
+  font-size: 20px;
+  margin-top: 50rpx;
+  margin-bottom: 40rpx;
+}
+/* 推荐文章 */
+.components_list_item {
+  padding-bottom: 30rpx;
+  margin-bottom: 32rpx;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.components_list_item:last-child {
+  margin-bottom: 0;
+  border-bottom: none; 
+}
+.components_wrap{
+  display: flex;
+}
+.components_left{
+  flex: 1;
+}
+.components_image{
+  width: 200rpx;
+  margin-left: 48rpx;
+}
+.components_image image{
+  width: 200rpx;
+  height: 150rpx;
+}
+.components_title{
+  width: 100%;
+  font-size: 16px;
+  color: #222222;
+  font-weight: bold;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  margin-bottom: 20rpx;
+}
+.components_synopsis{
+  width: 100%;
+  font-size: 28rpx;
+  color: #878B94;
+  line-height: 42rpx;
+  margin-top: 27rpx;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  margin-bottom: 20rpx;
+}
+.components_bottom{
+  font-size: 12px;
+  color: #BDC1CB;
+}
+.components_bottom .components_browse {
+  float: right
+}
+/* 暂无推荐 */
+.review_nullBox{
+  text-align: center;
+}
+.review_nullIcon{
+  height: 252rpx;
+  width: 282rpx;
+  margin: 40rpx auto;
+
+}
+.review_nullText{
+  color: #BDC2CB;
+  font-weight: 500;
+  margin-bottom: 40rpx;
+}
+.recommend_over{
+  margin: 35rpx auto 44rpx;
+  color: #D5D7E0;
+  font-size: 12px;
+  font-weight:500;
+  line-height: 40rpx;
+  text-align: center;
+}
+/* PDF */
+.pdf_box{
+  height: 94rpx;
+  width: 94rpx;
+  background:linear-gradient(135deg,rgba(255,215,108,1) 0%,rgba(252,116,16,1) 100%);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  right: 48rpx;
+  bottom: 44rpx;
+  box-shadow:0px 3px 20px 0px rgba(252, 30, 130, 0.35);
+  border-radius:50%;
+  font-weight:500;
+  font-size: 12px;
+}
+.pdf_top{
+  margin-top: 15rpx;
+}
+.wxBtn {
+  border: none !important;
+  background: none !important;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex: 1; */
+  /* position: static; */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  line-height: 103rpx;
+  display: flex;
+  align-items: center;
+  color: #FF6E02;
+  justify-content: center;
+}
+
+/* audio */
+.audio_time{
+  text-align: right;
+  color: #ADB1C4;
+  font-size: 10px;
+  font-weight:500;
+  margin-right: 30rpx;
+}
+.audio_icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 27rpx;
+}
+slider{
+  margin-bottom: 10rpx;
+}
+.back_icon{
+  height: 54rpx;
+  width: 52rpx;
+  margin-left: 6%
+}
+.prev_icon{
+  height: 27rpx;
+  width: 27rpx;
+  margin-left: 15%;
+}
+.bf_icon{
+  height: 84rpx;
+  width: 84rpx;
+  margin-left: 14%;
+}
+.next_icon{
+  height: 27rpx;
+  width: 27rpx;
+  margin-left: 14%;
+}
+.forward_icon{
+  height: 54rpx;
+  width: 52rpx;
+  margin-left: 13%;
+}

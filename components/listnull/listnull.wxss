@@ -1,0 +1,24 @@
+/* 底线 */
+.discover_over{
+  margin: 35rpx auto 44rpx;
+  color: #D5D7E0;
+  font-size: 12px;
+  font-weight:500;
+  line-height: 40rpx;
+  text-align: center;
+}
+/* 暂无推荐 */
+.review_nullBox{
+  text-align: center;
+  margin-top: 100rpx;
+}
+.review_nullIcon{
+  height: 252rpx;
+  width: 282rpx;
+  margin: 40rpx 31%;
+}
+.review_nullText{
+  color: #BDC2CB;
+  font-weight: 500;
+  margin-bottom: 40rpx;
+}

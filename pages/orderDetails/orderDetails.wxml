@@ -1,0 +1,48 @@
+<view class="order_details">
+  <view class="order_text">
+    <image src="../../images/my/complate.png" class="complate_icon"></image>已完成
+  </view>
+  <view class="order_info">
+    <view class="order_top">
+      <image class='order_cover' src="../../images/my/cover.png" wx:if="{{listQuery.orderType == 1}}"></image>
+      <image class='order_cover' src="{{otherImageUrl}}?fileName={{pageData.cover}}" wx:elif="{{listQuery.orderType != 1 && pageData.cover}}"></image>
+      <image class='order_cover' src="../../images/course/cover.png" wx:else></image>
+      <view class="order_name">{{pageData.name}}</view>
+    </view>
+    <view class="order_price">金额：<text>￥{{pageData.orderPayment}}</text></view>
+    <view class="order_price">优惠：<text>￥{{discount}}</text></view>
+    <view class="order_total">实付款：<text>￥{{pageData.payment}}</text></view>
+  </view>
+  <view class="order_main">
+    <view class="order_list">
+      <text class='text'>订单编号：</text>{{pageData.code}}
+    </view>
+    <view class="order_list">
+      <text class='text'>下单时间：</text>{{pageData.createTime}}
+    </view>
+    <view class="order_list" style="border:none">
+      <text class='text'>支付方式：</text>{{pageData.payTypeZh}}
+    </view>
+  </view>
+  <view class="order_main" wx:if="{{pageData.invoiceStatus == 1}}">
+    <view class="order_list">
+      <text class='text'>开票状态：</text>
+      <text wx:if="{{pageData.invoiceStatus == 1}}">开票完成</text>
+      <text wx:elif="{{pageData.invoiceStatus == 2}}">已申请</text>
+      <text wx:else>未开票</text>
+    </view>
+    <view class="order_list">
+      <text class='text'>发票类型：</text>
+      <text wx:if="{{pageData.invoiceType == 1}}">个人</text>
+      <text wx:else>公司</text>
+    </view>
+    <view class="order_list">
+      <text class='text'>发票抬头：</text>{{pageData.invoiceTitle}}
+    </view>
+    <view class="order_list" style="border:none">
+      <text class='text'>发票内容：</text>
+      <text wx:if="{{pageData.invoiceAddress == 1}}">商品明细</text>
+      <text wx:else>商品类别 </text>
+    </view>
+  </view>
+</view>

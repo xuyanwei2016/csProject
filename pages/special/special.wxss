@@ -1,0 +1,41 @@
+/* pages/special/special.wxss */
+.special {
+  height: 100vh;
+  padding: 0 24rpx;
+}
+.special_list {
+  border-bottom: 1rpx solid #EEEEEE;
+  padding: 30rpx 0;
+  display: flex;
+}
+.special_list image {
+  width: 265rpx;
+  height: 174rpx;
+  border-radius: 4rpx;
+}
+.special_content {
+  flex: 1;
+  margin-left: 26rpx;
+}
+.special_name {
+  font-size: 16px;
+  color: #212020;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+}
+.special_text {
+  margin-top: 28rpx;
+  font-size: 12px;
+  color: #696969;
+  line-height: 38rpx;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+}

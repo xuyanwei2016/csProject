@@ -1,0 +1,61 @@
+<!--pages/member/member.wxml-->
+<view class="member">
+  <view class="member_header">
+    <view class="member_card">
+      <image class="member_head_icon" wx:if="{avatarUrl}}" src="{{urlPath}}?fileName={{avatarUrl}}"></image>
+      <image class="member_head_icon" wx:else src="../../images/common/cover.png" ></image>
+      <view class="member_info">
+        <view class="member_nickName">
+          {{account}}
+          <image class="member_king_icon" src="../../images/common/member.png" wx:if="{{isVip==1}}"></image>
+        </view>
+        <view class="member_term" wx:if="{{isVip==1 && date}}">{{date}}到期</view>
+        <view class="member_term" wx:if="{{isVip==2 && date}}">会员于{{date}}已过期，为获得更好阅读体验，建议您尽快续费哟~</view>
+      </view>
+    </view>
+  </view>
+  <!-- 续费 -->
+  <view class="member_renew">
+    <view class="member_renew_title">续费延长VIP有效期</view>
+    <view class="member_renew_main">
+      <scroll-view class="member_renew_scroll" scroll-x="true" style="width:100%;">
+        <view class="member_scroll_view {{currentId==item.id?'hoverColor':''}}" wx:for="{{vipList}}" wx:key="index" bindtap="changePrice" data-id="{{item.id}}" data-sell="{{item.sellprice}}">
+           <view class="member_scroll_name">{{item.name}}</view>
+           <view class="{{item.price!=null?'mermber_price_box':'change'}}">
+            <view class="member_scroll_discount" wx:if="{{item.price}}">￥{{item.price}}</view>
+            <view class="member_scroll_money">
+              <text class="member_scroll_symbol">¥</text>
+              <text class="member_scroll_text" >{{item.sellprice}}</text>
+            </view>
+           </view>
+           <view class="member_scroll_save" wx:if="{{item.price}}">立省{{item.price-item.sellprice}}元</view>
+           <view class="member_scroll_reco" wx:if="{{index==0}}">推荐</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="member_renew_cost" bindtap="open">{{openTxt}}</view>
+  </view>
+  <!-- vip专属特权 -->
+  <view class="member_vip">
+    <view class="member_vip_title">VIP专属特权</view>
+    <view class="member_vip_main">
+      <view class="member_vip_list" wx:for="{{imageList}}">
+        <image class='member_vip_icon' src='../../images/member/{{item.url}}.png'></image>
+        <view class="member_vip_text">{{item.text}}</view>
+      </view>
+    </view>
+    <view class="member_vip_tip">
+      <view>1.会员可以免费阅读所有带VIP标识的文章、图书内容;</view>
+      <view>2.会员可以免费观看所有带VIP标识的音视频内容;</view>
+      <view>3.会员购买精品图书时可享受专属折扣;</view>
+      <view>4.购买年卡会员，抽取2000名用户赠送精品图书;</view>
+      <view>5.属于会员专属身份标识，彰显与众不同;</view>
+    </view>
+  </view>
+  <!-- vip帮助服务 -->
+  <view class="member_help">
+    <view class="member_help_title">VIP帮助服务</view>
+    <view class="member_help_con">您可以通过查看<text class="member_help_agree" bindtap="goServerDel">会员服务协议</text>了解详细内容哦~</view>
+    <view class="member_help_tip">如果您还需要其他服务，请发送邮件至ccsts@126.com，我们会尽快与您取得联系！</view>
+  </view>
+</view>

@@ -1,0 +1,99 @@
+
+<view class="label_search">
+  <view class="label_input" bindtap='resourceItem'>
+    <image src='../../images/index/search.png' class='search_image'></image> 
+    <input placeholder='请输入关键词' placeholder-class='placeholder'></input>
+  </view>
+  <view class="label_nav">
+    <view class='nav_list' bindtap="labelPage" data-type="{{item.type}}" wx:for="{{navList}}" data-title="{{item.text}}" wx:key="{{index}}">
+      <image class='nav_img' src='../../images/label/{{item.url}}.png'></image>
+      <view class='nav_text'>{{item.text}}</view>
+    </view>
+  </view>
+</view>
+<!-- <view class="label_course">课程</view> -->
+<!-- 课程推荐 -->
+<view class="label_recommend" wx:if="{{courseList && courseList.length>0}}">
+  <view wx:for="{{courseList}}" wx:key="{{index}}">
+    <view class="course_list" wx:if="{{index == 0}}" bindtap='courseDet' data-id="{{item.id}}" data-type="{{item.types}}">
+      <image class='course_cover' src="{{otherImageUrl}}?fileName={{item.cover}}" wx:if="{{item.cover}}"></image>
+      <image class='course_cover' src='../../images/course/cover.png' wx:else></image>
+      <view class="course_bottom">
+        <view class="course_name">{{item.name}}</view>
+        <view class="course_intro">{{item.synopsis}}</view>
+        <view class="course_price">
+          <text class="course_realprice">
+            <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.price}}</text>
+            <text wx:else style='color:#0AB562'>免费</text>
+          </text>
+          <text style="text-decoration: line-through;color: #CBCBCB;" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+          <view class="course_browse"><image src="../../images/index/browse.png" class="browse_icon"></image>{{item.clickNum}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="other_course" wx:else bindtap='courseDet' data-id="{{item.id}}" data-type="{{item.types}}">
+      <view class="other_cover">
+        <image class='nav_img' src="{{otherImageUrl}}?fileName={{item.cover}}" wx:if="{{item.cover}}"></image>
+        <image class='nav_img' src='../../images/course/cover.png' wx:else></image>
+      </view>
+      <view class="other_bottom">
+        <view class='other_top'><view class="other_name">{{item.name}}</view></view>
+        <view class="other_price">
+          <text class="other_realprice">
+            <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.price}}</text>
+            <text wx:else style='color:#0AB562'>免费</text>
+          </text>
+          <text class="other_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+          <view class="other_browse"><image src="../../images/index/browse.png" class="browse_icon"></image>{{item.clickNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 大咖说说 -->
+<view class='index_subject' wx:if="{{subjectList && subjectList.length>0}}">
+  <view class='common_title'>
+    <view class='common_left'>大咖说税</view>
+    <navigator url="../starSay/starSay?id={{labelId}}">
+      <view class='common_right' style="margin-right:30rpx">更多 <image src='../../images/index/more.png'></image></view>
+    </navigator>
+  </view>
+  <view class='subject_list'>
+    <scroll-view class="common_scroll" scroll-x="true" bindscroll="scroll" >
+      <view class="subject_scroll_view" wx:for="{{subjectList}}" wx:key="{{item.index}}" bindtap="subjectDetails" data-id="{{item.id}}" data-template="{{item.template}}">
+        <image src='{{imageUrl}}?fileName={{item.cover}}'></image>
+        <view class='subject_scroll_synopsis'> 
+          <view class='subject_synopsis_title'>{{item.name}}</view>
+          <view class='subject_synopsis_con'>{{item.content}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 个税计算器 -->
+  <view class='tax_img' wx:if="{{listQuery.name == '个税' || listQuery.name == '个人所得税'}}" bindtap="calculator">
+    <image src='../../images/label/tax.png'></image>
+  </view>
+</view>
+<!-- 推荐阅读  -->
+<view class='index_example' wx:if="{{recommendList && recommendList.length>0}}">
+  <view class='common_title' >
+    <view class='common_left'>推荐阅读</view>
+  </view>
+  <view class='components_list'>
+    <view class='components_list_item' wx:for="{{recommendList}}" wx:key="{{item.index}}" bindtap="goDetails" data-id="{{item.id}}">
+      <view class="components_wrap">
+        <view class="components_left">
+          <view class='components_title'>{{item.name}}</view>
+          <view class='components_synopsis' wx:if="{{item.text}}">{{item.text}}</view>
+          <view class='components_bottom'>
+            <text class="components_date">{{item.publishTime?item.publishTime:item.uploadTime}}</text>
+            <text class="components_browse">共{{item.browseNum>9999?"1万+":item.browseNum}}次浏览</text>
+          </view>
+        </view>
+        <view class="components_image" wx:if="{{item.img}}"><image src="{{imageUrl}}?fileName={{item.img}}"></image></view>
+        <view class="components_image" wx:elif="{{item.imgSrc}}"><image src="{{item.imgSrc}}"></image></view>
+      </view>
+    </view>
+  </view>
+  <view class="label_baseLine" wx:if="{{totalPage<=listQuery.pageNum}}">—— 这是我的底线 ——</view>
+</view>

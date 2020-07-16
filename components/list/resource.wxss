@@ -1,0 +1,135 @@
+/* resource.wxss */
+.resource_box{
+  padding: 0 24rpx;
+}
+.resource_list{
+  padding: 30rpx 0;
+  border-bottom: solid 1px #EEEEEE;
+  display: flex;
+  width: 100%;
+}
+/* 文章 */
+.resource_article_left{
+  width: 204rpx;
+  height: 151rpx;
+  margin-left: 24rpx;
+}
+.resource_article_left .article_icon{
+  max-width: 204rpx;
+  max-height: 151rpx;
+}
+.resource_article_right{
+  flex: 1;
+}
+/* 公共样式 */
+.name_box{
+  font-size:16px;
+  font-weight:bold;
+  color:#222222;
+  line-height:46rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.content_box{
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  color: #878B94;
+  word-break:break-all;
+}
+.read_box{
+  color: #BDC1CB;
+  font-size: 11px;
+  margin-top: 20rpx;
+}
+.read_left{
+  float: left;
+}
+.read_right{
+  float: right;
+}
+.read_icon{
+  width: 24rpx;
+  height: 16rpx;
+  margin-right: 9rpx;
+}
+.author_box{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+  font-weight:500;
+  color: #BDC2CB;
+  margin-top: 50rpx;
+}
+
+/* 图书 */
+.resource_book_left{
+  width: 153rpx;
+  height: 206rpx;
+  margin-right: 27rpx;
+}
+.resource_book_left .book_icon{
+  max-width: 153rpx;
+  max-height: 206rpx;
+}
+.resource_book_right{
+  flex: 1;
+}
+/* 微课 */
+.resource_class_left{
+  width: 250rpx;
+  height: 180rpx;
+  margin-right: 27rpx;
+}
+.resource_class_left .class_icon{
+  max-width: 250rpx;
+  max-height: 180rpx;
+}
+.resource_class_right{
+  flex: 1;
+}
+.resource_class_right .class_read{
+  margin-top: 100rpx;
+}
+
+.resource_null{
+  text-align: center;
+}
+.resource_null .null_image{
+  width: 435rpx;
+  height: 409rpx;
+  margin: 0 auto;
+  font-weight:500;
+  margin-top: 180rpx;
+}
+.resource_null .null_text{
+  margin-top: 50rpx;
+  color: #696969;
+  font-size: 16px;
+}
+.resource_null .null_tips{
+  margin-top: 19rpx;
+  color: #BDC2CB;
+  font-size: 14px;
+}
+/* 底线 */
+.resource_over{
+  margin: 35rpx auto 44rpx;
+  color: #D5D7E0;
+  font-size: 12px;
+  font-weight:500;
+  line-height: 40rpx;
+  text-align: center;
+}

@@ -1,0 +1,251 @@
+/* pages/member/member.wxss */
+.member {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #F4F6FA;
+}
+.member_header {
+  width: 100%;
+  height: 312rpx;
+  position: relative;
+  background: url('http://www.zgsccbs.com/skz/program/member_bg.png');
+  background-size:  100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.member_card {
+  margin-left: 32rpx;
+  margin-top: 118rpx;
+  height: 112rpx;
+
+}
+.member_head_icon{
+  width: 102rpx;
+  height: 102rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  margin-top: 5rpx;
+  float: left;
+}
+.member_king_icon {
+  width: 31rpx;
+  height: 26rpx;
+  margin-left: 10rpx;
+  margin-top: 4rpx;
+}
+.member_info {
+  float: left;
+  line-height: 40rpx;
+  width: 60%;
+  display:flex;
+  display:-ms-flexbox;
+  height: 112rpx;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.member_nickName {
+  color: #FFFFFF;
+  font-size: 36rpx;
+  font-weight: 800;
+  margin-bottom: 19rpx;
+  width: 100%;
+}
+.member_term {
+  color: #D8D2D5;
+  font-size: 12px;
+  font-weight: 500;
+}
+.member_login {
+  display: inline-block;
+  width: 152rpx;
+  height: 56rpx;
+  text-align: center;
+  line-height: 56rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  color: #AF6A20;
+  font-size: 16px;
+  margin-left: 164rpx;
+}
+.member_renew {
+  background: #fff;
+  padding: 50rpx 0 0 24rpx;
+  border-radius: 20rpx 20rpx 0px 0px;
+  overflow: hidden;
+}
+.member_renew_title {
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 49rpx;
+}
+.member_renew_main {
+  padding-right: 10rpx;
+  box-sizing: border-box;
+}
+.member_renew_scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+.member_scroll_view {
+  border: 2rpx solid #E9E9E9;
+  margin-right: 14rpx;
+  width: 200rpx;
+  height: 242rpx;
+  text-align: center;
+  padding: 37rpx 0 0;
+  position: relative;
+  border-radius: 10rpx;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+.member_scroll_reco {
+  position: absolute;
+  width: 80rpx;
+  height: 32rpx;
+  text-align: center;
+  line-height: 32rpx;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 20rpx;
+  background: #F5843A;
+  border-radius: 10rpx 0 20rpx 0;
+}
+.member_scroll_name {
+  color: #333333;
+  font-size: 15px;
+  font-weight:500;
+}
+.mermber_price_box{
+  display:flex;
+  display:-ms-flexbox;
+  height: 120rpx;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+.member_scroll_money {
+  color: #EB5D29;
+  font-weight:500;
+}
+.change {
+  margin-top: 70rpx;
+}
+.member_scroll_symbol {
+  font-size: 16px;
+}
+.member_scroll_text {
+  font-size: 21px;
+}
+.hoverColor {
+  background: #FFFAF3;
+  border-color: #E4BE73;
+}
+.member_scroll_discount {
+  width: 100%;
+  color: #999999;
+  font-size: 10px;
+  font-weight:500;
+  text-decoration: line-through;
+}
+.member_scroll_save {
+  width: 176rpx;
+  height:46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  background: #FFA771;
+  border-radius: 6rpx;
+  color: #fff;
+  font-size: 12px;
+  margin: 0 auto;
+}
+.member_icon {
+  width: 21rpx;
+  height: 21rpx;
+  margin-right: 6rpx;
+}
+.member_text {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+}
+.member_renew_cost {
+  margin: 70rpx auto 0;
+  width: 600rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  background:linear-gradient(90deg,rgba(236,180,133,1) 0%,rgba(186,133,91,1) 100%);
+  border-radius: 40rpx;
+}
+.member_vip {
+  padding: 62rpx 0 39rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.member_vip_title {
+  color: #202021;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 48rpx;
+  padding-left: 24rpx;
+}
+.member_vip_main {
+  overflow: hidden;
+  padding: 0 12rpx;
+}
+.member_vip_list {
+  width: 25%;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  float: left;
+}
+.member_vip_icon {
+  width: 83rpx;
+  height: 83rpx;
+}
+.member_vip_text {
+  color: #A17046;
+  font-size: 13px;
+  font-weight: 500;
+}
+.member_vip_tip {
+  color: #D07327;
+  font-size: 12px;
+  padding: 40rpx 40rpx 30rpx 40rpx;
+  line-height: 38rpx;
+  background:#FFFAF0;
+  margin: 0 30rpx;
+  margin-top: 40rpx;
+}
+.member_help {
+  background: #fff;
+  padding: 39rpx 24rpx 57rpx;
+  box-sizing: border-box; 
+  font-size: 14px;
+  font-weight:500;
+}
+.member_help_title {
+  color: #333333;
+  font-size: 16px;
+  font-weight:bold;
+  margin-bottom: 30rpx;
+}
+.member_help_con {
+  color: #333333;
+  margin-top: 40rpx;
+}
+.member_help_agree {
+  color: #EB5D29;
+}
+.member_help_tip{
+  margin-top: 30rpx;
+  color: #888888;
+  line-height: 40rpx;
+}

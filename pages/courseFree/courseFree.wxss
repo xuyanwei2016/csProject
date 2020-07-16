@@ -1,0 +1,45 @@
+.free_course{
+  overflow: hidden;
+  padding: 30rpx;
+}
+.free_list{
+  overflow: hidden;
+  width: 48%;
+  float: left;
+  margin-bottom: 48rpx;
+}
+.free_list:nth-child(2n+1){
+  margin-right: 4%;
+}
+.free_img{
+  width:100%;
+  height:220rpx;
+  border-radius:4px;
+  margin-bottom: 26rpx;
+}
+.free_name{
+  color: #202021;
+  font-weight: bold;
+  font-size: 15px;
+  line-height:44rpx;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  margin-bottom: 26rpx;
+  min-height: 80rpx;
+}
+.free_price{
+  color: #0AB562;
+  font-size: 12px;
+  font-weight:500;
+  line-height: 34rpx;
+  
+}
+.free_lineprice{
+  margin-left: 15rpx;
+  text-decoration: line-through;
+  color: #9C9D9C;
+}

@@ -1,0 +1,84 @@
+<view class="course_page">
+  <view class="course_sort">
+    <view class="course_nav">
+      <view class='nav_list' bindtap="resourcePage" data-query="{{item.text}}" wx:for="{{navList}}" wx:key="{{index}}">
+        <image class='nav_img' src='../../images/course/{{item.url}}.png'></image>
+        <view class='nav_text'>{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 免费课程 -->
+  <titleBox titleData="免费课程" code="WX_home02" bind:courseList="myList" wx:if="{{freeList && freeList.length>0}}"></titleBox>
+  <view class="course_free">
+    <view class="free_list" wx:for="{{freeList}}" wx:key="{{index}}" 
+      bindtap='courseDet' data-id="{{item.resId}}" data-type="{{item.resType}}">
+      <image class='course_img' src="{{otherImageUrl}}?fileName={{item.resImg}}" wx:if="{{item.resImg}}"></image>
+      <image class='course_img' src='../../images/course/cover.png' wx:else></image>
+      <view class='course_name_box'><view class="course_name">{{item.resName}}</view></view>
+      <view class="course_price">
+        <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.price}}</text>
+        <text wx:else style='color:#0AB562'>免费</text>
+        <text class="course_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 精品小课 -->
+  <view class="excellent_box" wx:if="{{excellentList && excellentList.length>0}}">
+    <titleBox titleData="精品小课" code="WX_home03" bind:courseList="myList"></titleBox>
+    <view class="other_course" wx:for="{{excellentList}}" wx:key="{{index}}" 
+      bindtap='courseDet' data-id="{{item.resId}}" data-type="{{item.resType}}">
+      <view class="other_cover">
+        <image class='nav_img' src="{{otherImageUrl}}?fileName={{item.resImg}}" wx:if="{{item.resImg}}"></image>
+        <image class='nav_img' src='../../images/course/cover.png' wx:else></image>
+      </view>
+      <view class="other_bottom">
+        <view class="other_name"><view class='name_box'>{{item.resName}}</view></view>
+        <view class="other_price">
+          <text class="other_realprice">
+            <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.price}}</text>
+            <text wx:else style='color:#0AB562'>免费</text>
+          </text>
+          <text class="other_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+          <view class="other_browse"><image src="../../images/index/browse.png" class="browse_icon"></image>{{item.clickNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 好课推荐 -->
+  <view class="recommend_box" wx:if="{{goodList && goodList.length>0}}">
+    <titleBox titleData="好课推荐" code="WX_home04" bind:courseList="myList"></titleBox>
+    <view class="recommend_course" wx:for="{{goodList}}" wx:key="{{index}}"
+      bindtap='courseDet' data-id="{{item.resId}}" data-type="{{item.resType}}"> 
+      <view class="recommend_cover">
+        <image class='nav_img' src="{{otherImageUrl}}?fileName={{item.resImg}}" wx:if="{{item.resImg}}"></image>
+        <image class='nav_img' src='../../images/course/cover.png' wx:else></image>
+      </view>
+      <view class="recommend_bottom">
+        <view class="recommend_name">{{item.resName}}</view>
+        <view class="recommend_price">
+          <text class="recommend_realprice">
+            <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.price}}</text>
+            <text wx:else style='color:#0AB562'>免费</text>
+          </text>
+          <text class="recommend_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+        </view>
+        <view class="recommend_details">
+          <view class="recommend_chapter" wx:if="{{item.resType == 3}}">
+            <image src="../../images/common/chapter.png" class="browse_icon"></image>
+            <text>已更新{{item.updatePeriods?item.updatePeriods:'0'}}节</text>
+          </view>
+          <view class="recommend_browse">
+            <image src="../../images/index/browse.png" class="browse_icon"></image>
+            <text>{{item.clickNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 暂无内容 -->
+  <view wx:if="{{(!freeList||freeList.length == 0) && (!excellentList||excellentList.length == 0) && (!goodList||goodList.length == 0)}}" class="review_nullBox">
+    <image src='../../images/resourceDetails/review.png' class='review_nullIcon'></image>
+    <view class="review_nullText">暂无数据</view>
+  </view>
+  
+</view>

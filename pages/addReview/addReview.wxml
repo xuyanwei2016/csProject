@@ -1,0 +1,25 @@
+<view class="start_body">
+  <!-- <view class="start_box">
+    <view class="start_tip">星级评定</view>
+    <image src='../../images/common/start.png' 
+      class='start_icon' wx:for="{{defaultData}}" 
+      data-index="{{item.index}}" 
+      bindtap="changeScore" 
+      data-type="light"
+      wx:key="{{index}}"
+      wx:if="{{item.index <= lightScore}}">
+      </image>
+    <image src='../../images/common/start_default.png' 
+      class='start_icon' bindtap="changeScore" 
+      data-index="1" wx:for="{{defaultData}}" 
+      data-index="{{item.index}}" 
+      data-type="default"
+      wx:key="{{index}}"
+      wx:if="{{item.index <= defaultScore}}">
+    </image>
+  </view> -->
+  <view class="start_text">
+    <textarea placeholder="请输入评价内容..." placeholder-style="color:#AAABB3; " maxlength="300" bindinput="changeReview" auto-focus="true"/>
+  </view>
+  <view class="submitBtn" bindtap="submitBtn">提交</view>
+</view>

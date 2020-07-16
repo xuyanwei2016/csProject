@@ -1,0 +1,394 @@
+/* pages/labelReview/labelReview.wxss */
+.label_search{
+  width: 100%;
+  background: url('http://www.zgsccbs.com/skz/program/label_bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding-bottom: 30rpx;
+}
+/* search */
+.label_input{
+  width: 94%;
+  margin: 10rpx 3% 34rpx;
+  background: #fff;
+  border-radius:37rpx;
+  height: 74rpx;
+  line-height: 70rpx;
+  font-size: 14px;
+}
+.label_input input{
+  height: 74rpx;
+  line-height: 70rpx;
+  float: left;
+  margin-left: 14rpx;
+  border: none;
+}
+.label_input .search_image{
+  height: 30rpx;
+  width: 30rpx;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 24rpx;
+}
+.placeholder{
+  color:#939393;
+}
+/* nav */
+.label_nav{
+  height: 210rpx;
+  background: #fff;
+  box-shadow:0px 3px 13px 0px rgba(153, 153, 153, 0.35);
+  border-radius:10rpx;
+  width: 92%;
+  margin-left: 4%;
+}
+.nav_list{
+  width: 25%;
+  float: left;
+  text-align: center;
+  margin-top: 44rpx;
+}
+.nav_list .nav_img{
+  width: 80rpx;
+  height: 80rpx;
+}
+.nav_list .nav_text{
+  color: #222222;
+  font-size: 12px;
+}
+/* .label_course {
+  padding-left: 30rpx;
+  margin-bottom: 42rpx;
+  margin-top: 30rpx;
+  font-size: 20px;
+  color: #222222;
+  font-weight: bold;
+} */
+/* 推荐位 */
+.label_recommend{
+  overflow: hidden;
+  padding: 0 30rpx;
+}
+.course_list{
+  width: 100%;
+  overflow: hidden;
+  box-shadow:0px 3px 13px 0px rgba(153, 153, 153, 0.35);
+  border-radius:6rpx;
+  padding-bottom: 24rpx;
+  margin-bottom: 30rpx;
+}
+.course_cover{
+  width: 100%;
+  height: 300rpx;
+}
+.course_bottom{
+  padding: 0 24rpx;
+}
+.course_name{
+  font-size:16px;
+  font-weight:bold;
+  color:rgba(34,34,34,1);
+  line-height:44rpx;
+  width: 100%;
+  margin-top: 26rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.course_intro{
+  font-size: 12px;
+  font-weight: 500;
+  color:rgba(135,139,148,1);
+  line-height: 36rpx;
+  margin-top: 15rpx;
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+}
+.course_price{
+  color: #CBCBCB;
+  font-size: 13px;
+  margin-top: 25rpx;
+}
+.course_realprice{
+  color: #FA4749;
+  font-size: 15px;
+  font-weight:500;
+  line-height:40rpx;
+  margin-right: 15rpx;
+}
+.course_browse{
+  float: right;
+  color: #878B94;
+}
+.browse_icon{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 7rpx; 
+}
+.other_course{
+  display: flex;
+  border-bottom: solid 1px #EEEEEE;
+  padding: 28rpx 0;
+  margin-top: -14rpx;
+}
+.other_cover{
+  width: 300rpx;
+  margin-right: 24rpx;
+}
+.other_cover image{
+  width: 300rpx;
+  height: 200rpx;
+}
+.other_bottom{
+  flex:1;
+}
+.other_top{
+  height: 155rpx;
+}
+.other_name{
+  color: #202021;
+  font-weight:bold;
+  line-height: 44rpx;
+  font-size: 15px;
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+}
+.other_price{
+  font-size: 12px;
+}
+.other_realprice{
+  color: #FE2023;
+  font-size: 14px;
+  font-weight:500;
+  line-height:40rpx;
+  margin-right: 15rpx;
+  
+}
+.other_lineprice{
+  text-decoration: line-through;
+  color: #9C9D9C;
+}
+.other_browse{
+  float: right;
+  color: #BDBEBD;
+  margin-top: 5rpx;
+}
+.browse_icon{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 7rpx; 
+}
+
+/* common header */
+.common_title {
+  overflow: hidden;
+  line-height: 140rpx;
+}
+.common_left {
+  float: left;
+  color: #222222;
+  font-size: 20px;
+  font-weight: bold;
+}
+.common_right {
+  float: right; 
+  font-size: 14px;
+  color: #606773;
+}
+.common_right image {
+  width: 12rpx;
+  height: 20rpx;
+}
+/* common_scroll */
+.common_scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+/* 大咖说说 */
+.index_subject {
+  padding: 10rpx 0 30rpx 30rpx;
+  background: #fff;
+  border-top: solid 16rpx #EDEEF0;
+}
+.subject_list { 
+  overflow: hidden;
+}
+.subject_scroll_view {
+  display: inline-block;
+  width: 500rpx;
+  margin-right: 30rpx;
+  vertical-align: top;
+}
+.subject_scroll_view image {
+  width: 500rpx;
+  height: 280rpx;
+  border-radius: 4rpx;
+}
+.subject_scroll_synopsis {
+  margin-top: 10rpx;
+}
+.subject_synopsis_title {
+  width: 500rpx;
+  font-size: 16px;
+  color: #202021;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  line-height:44rpx;
+  font-weight:bold;
+}
+.subject_synopsis_con {
+  width: 500rpx;
+  color: #878B94;
+  font-weight:500;
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  line-height:36rpx;
+  margin-top: 6rpx;
+}
+.tax_img{
+  margin: 60rpx 0;
+  margin-right: 30rpx;
+}
+.tax_img image{
+  width: 100%;
+  height: 148rpx;
+}
+/* 推荐阅读  */
+.index_example {
+  padding: 0 24rpx;
+  background: #fff;
+  border-top: solid 16rpx #EDEEF0;
+}
+.example_list_item {
+  padding-bottom: 30rpx;
+  margin-bottom: 40rpx;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.example_list_item:last-child {
+  margin-bottom: 0;
+  border-bottom: none; 
+}
+.example_top{
+  display: flex;
+}
+.example_left{
+  flex: 1;
+}
+.example_image{
+  width: 200rpx;
+  margin-left: 48rpx;
+}
+.example_image image{
+  width: 200rpx;
+  height: 150rpx;
+}
+.example_title {
+  width: 100%;
+  font-size: 16px;
+  color: #222222;
+  font-weight: bold;
+}
+.example_synopsis {
+  width: 100%;
+  font-size: 28rpx;
+  color: #878B94;
+  line-height: 42rpx;
+  margin-top: 27rpx;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  margin-bottom: 20rpx;
+}
+.example_bottom{
+  font-size: 12px;
+  color: #BDC1CB;
+}
+.example_bottom .example_browse {
+  float: right
+}
+/* 推荐阅读 */
+.components_list_item {
+  padding-bottom: 30rpx;
+  margin-bottom: 40rpx;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+/* .components_list_item:last-child {
+  margin-bottom: 0;
+  border-bottom: none; 
+} */
+.components_wrap{
+  display: flex;
+}
+.components_left{
+  flex: 1;
+}
+.components_image{
+  width: 200rpx;
+  margin-left: 48rpx;
+}
+.components_image image{
+  width: 200rpx;
+  height: 150rpx;
+}
+.components_title{
+  width: 100%;
+  font-size: 16px;
+  color: #222222;
+  font-weight: bold;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  margin-bottom: 20rpx;
+}
+.components_synopsis{
+  width: 100%;
+  font-size: 28rpx;
+  color: #878B94;
+  line-height: 42rpx;
+  margin-top: 27rpx;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  margin-bottom: 20rpx;
+}
+.components_bottom{
+  font-size: 12px;
+  color: #BDC1CB;
+}
+.components_bottom .components_browse {
+  float: right
+}
+.label_baseLine {
+  color: #D5D7E0;
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 35rpx;
+}

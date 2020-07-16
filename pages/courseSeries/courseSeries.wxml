@@ -1,0 +1,29 @@
+<view class="series_box">
+  <view class="series_content" wx:for="{{dataList}}" wx:key="{{index}}" bindtap='courseDet' data-id="{{item.id}}" data-name="{{item.courseName}}">
+    <view class="series_cover">
+      <image class='series_img' src="{{otherImageUrl}}?fileName={{item.cover}}" wx:if="{{item.cover}}"></image>
+      <image class='series_img' src="../../images/course/cover.png" wx:else></image>
+    </view>
+    <view class="series_bottom">
+      <view class="series_name">{{item.courseName}}</view>
+      <view>
+      </view>
+      <view class="series_price">
+        <text class="series_realprice" wx:if="{{item.price >0}}" style='color:#E40000'>￥{{item.price}}</text>
+        <text class="series_realprice" wx:else style='color:#0AB562'>免费</text>
+        <text class="series_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+      </view>
+      <view class='series_main'>
+        <view class="series_periods">
+          <image src="../../images/common/chapter.png" class="browse_icon"></image>
+          已更新{{item.updatePeriods}}节
+        </view>
+        <view class="series_browse">
+          <image src="../../images/index/browse.png" class="browse_icon"></image>
+          {{item.clickNum}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <listNull isNull="{{isNull}}" isLast="{{isLast}}"></listNull>
+</view>

@@ -1,0 +1,3 @@
+<view>
+  <web-view src="{{requestUrl}}{{pdfPath}}" wx:if="{{bool}}"></web-view>
+</view>

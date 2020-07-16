@@ -1,0 +1,34 @@
+<view class="review_list" wx:for="{{reviewData}}" wx:key="{{index}}">
+  <view class="review_topBox">
+    <image src='{{urlPath}}?fileName={{item.userImg}}' class='header' wx:if="{{item.userImg}}"></image>
+    <image src='../../images/resourceDetails/header.png' class="header" wx:else></image>
+    <text class="name">{{item.userName}}</text>
+    <!-- <view class="start_box">
+      <image src='../../images/common/start.png' 
+        class='start' wx:for="{{defaultData}}" 
+        wx:for="{{defaultData}}"
+        wx:for-item="oItem"
+        wx:for-index="oIndex"
+        wx:key="{{oIndex}}"
+        wx:if="{{oItem.index <= item.score}}">
+      </image>
+    </view> -->
+  </view>
+  <view class="review_intro">{{item.content}}</view>
+  <view class="review_bottom">
+    <text>{{item.releaseTime}}</text>
+    <view class="fav_content" bindtap="favListBtn" data-id="{{item.id}}" data-agree="{{item.isAgree }}">
+      <image src='../../images/common/support_hover.png' class="fav_icon" wx:if="{{item.isAgree == 1}}"></image>
+      <image src='../../images/common/support.png' class="fav_icon" wx:else></image>
+      {{item.fabulousNum}}
+    </view>
+    <view class="review_content" bindtap="reply" data-replyid="{{item.id}}"><image src='../../images/common/review_icon.png' class="review_icon"></image>{{item.replyNum}}</view>
+  </view>
+</view>
+<!-- 查看更多评论 -->
+<view class="look_review" wx:if="{{reviewTotal && reviewTotal>5}}" bindtap="reviewDetails">查看全部评论</view>
+<!-- 暂无评论 -->
+<view wx:if="{{listNull}}" class="review_nullBox">
+  <image src='../../images/resourceDetails/review.png' class='review_nullIcon'></image>
+  <view class="review_nullText">你将成为第一个发言人</view>
+</view>

@@ -1,0 +1,97 @@
+.order_page{
+  width: 100%;
+  background: #F8F8F8;
+  min-height: 100vh;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+}
+.order_list{
+  background: #fff;
+  margin: 20rpx 24rpx;
+  border-radius:20rpx;
+  box-shadow:0px 2px 40px 0px rgba(96,96,96,0.04);
+}
+.order_top{
+  height: 85rpx;
+  line-height: 85rpx;
+  border-bottom: solid 1px #EBEBEB;
+  color: #999999;
+  padding: 0 30rpx;
+}
+.order_status{
+  float: right;
+}
+.order_details{
+  padding: 34rpx 30rpx 22rpx 30rpx;
+  display: flex;
+}
+.order_left{
+  height: 170rpx;
+  width: 256rpx;
+  margin-right: 28rpx;
+}
+.order_cover{
+  height: 170rpx;
+  width: 256rpx;
+}
+.order_right{
+  flex: 1;
+  font-weight:bold;
+  font-size: 15px;
+  color: #202021;
+  line-height:44rpx;
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  height: 88rpx;
+}
+.order_bottom{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+  padding-bottom: 34rpx;
+  font-size: 14px;
+}
+.order_price{
+  float: left;
+  color: #999999;
+  font-weight:500;
+}
+.order_price text{
+  color: #FE2023;
+}
+.order_btn{
+  float: right;
+  height: 60rpx;
+  width: 160rpx;
+  text-align: center;
+  color: #1873EF;
+  border:2px solid rgba(228,238,255,1);
+  border-radius:30rpx;
+  font-size: 13px;
+}
+/*无数据*/
+.resource_null{
+  text-align: center;
+}
+.resource_null .null_image{
+  width: 435rpx;
+  height: 409rpx;
+  margin: 0 auto;
+  font-weight:500;
+  margin-top: 180rpx;
+}
+.resource_null .null_text{
+  margin-top: 50rpx;
+  color: #696969;
+  font-size: 16px;
+}
+.resource_null .null_tips{
+  margin-top: 19rpx;
+  color: #BDC2CB;
+  font-size: 14px;
+}

@@ -1,0 +1,44 @@
+.start_body{
+  background: #F7F7F7;
+  height: 100vh;
+}
+.start_box{
+  height: 130rpx;
+  padding: 0 28rpx;
+  background: #fff;
+  border-bottom: solid 1px #E7E7E7;
+}
+.start_tip{
+  float: left;
+  margin-right: 38rpx;
+  margin-top: 40rpx;
+}
+.start_icon{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 30rpx;
+  float: left;
+  margin-top: 45rpx;
+}
+.start_text{
+  background: #fff;
+  padding: 27rpx;
+  height: 407rpx;
+
+}
+textarea{
+  height: 100%;
+  width: 100%;
+}
+.submitBtn{
+  height: 80rpx;
+  margin: 0 auto;
+  width: 600rpx;
+  background:rgba(77,137,246,1);
+  box-shadow:0px 2px 16px 0px rgba(42, 215, 106, 0.35);
+  border-radius:40rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 60rpx;
+}

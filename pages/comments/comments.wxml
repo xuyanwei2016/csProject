@@ -1,0 +1,8 @@
+<view class="comments_page">
+  <view class="review_listBox">
+    <component reviewData="{{reviewData}}" bind:myList="myList" reviewType="{{reviewType}}" postId="{{listQuery.resourceId}}" listNull="{{listNull}}"/>
+  </view>
+  <view class="comments_box">
+    <view class="comments_input" bindtap="reviewBtn">内容这么赞，快来评论吧！</view>
+  </view>
+</view>

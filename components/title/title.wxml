@@ -1,0 +1,4 @@
+<view class='common_title' >
+  <view class='common_left'>{{titleData}}</view>
+  <view class='common_right' bindtap="courseList" data-type="2" data-code="{{code}}">更多 <image src='../../images/index/more.png'></image></view>
+</view>

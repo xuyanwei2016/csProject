@@ -1,0 +1,6 @@
+/* pages/serveDeal/serveDeal.wxss */
+.serveDeal{
+  padding: 44rpx;
+  line-height: 60rpx;
+  text-indent: 2em;
+}

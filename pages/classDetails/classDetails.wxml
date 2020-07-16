@@ -1,0 +1,42 @@
+<view class="class_body">
+  <view class="class_video">
+    <video src='{{imgPath}}file{{videoSrc}}/index.m3u8' controls class='cover'
+      title="{{pageData.name}}" id='myVideo' poster="{{poster}}">
+    </video>
+    <view class="video_box" wx:if="{{pageData.messageCode >=0 && pageData.messageCode != null}}" bindtap="videTap"></view>
+  </view>
+  <view class="class_border">
+    <view class="class_topBox">
+      <view class="title">{{pageData.name}}</view>
+      <view class="content">
+        <text class="resource" wx:if="{{pageData.source}}">{{pageData.source}}</text>
+        <view class="browser_box"><image src='../../images/common/browser.png' class='read_icon'></image>{{pageData.clickNum}}人看过</view>
+      </view>
+    </view>
+  </view>  
+  <view class="class_border">
+    <view class="class_introBox" wx:if="{{content}}">
+      <view class="intro_title">简介</view>
+      <view class="intro_content">
+        <view>
+          <rich-text nodes="{{intro}}" wx:if="{{isOpen}}"></rich-text>
+          <rich-text nodes="{{content}}" wx:else></rich-text>
+        </view>
+        <view bindtap="openIntro" wx:if="{{content&&content.length>60}}" class="open_intro">
+          <image src='../../images/resourceDetails/open.png' class="open_icon" wx:if="{{isOpen}}"></image>
+          <image wx:else src='../../images/resourceDetails/open.png' class="close_icon" ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="class_review">
+    <view class="intro_title">评论</view>
+    <view class="review_input" bindtap="addReview"><text class="review_input_text">内容这么赞，快来评论吧！</text></view>
+    <component reviewData="{{reviewData}}" reviewTotal="{{reviewTotal}}" reviewType="{{reviewType}}"
+      bind:myList="myList"  postId="{{detailsId}}" name="{{name}}" listNull="{{listNull}}"/>
+  </view>
+  <!-- vip权限 -->
+  <view class="class_vip" bindtap="btnClick" wx:if="{{pageData.messageCode >= 0 && pageData.messageCode != null}}" style='padding-bottom:{{ isIphoneX ? 34 : 0 }}px;'>{{pageData.message}}</view>
+  <!-- 开通VIP会员弹窗 -->
+  <dialog id="dialog"></dialog>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "搜索列表",
+  "navigationBarBackgroundColor": "#1A6FEE",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh":true,
+  "component": true,
+  "usingComponents": {
+    "component": "../../components/list/resource"
+  }
+}

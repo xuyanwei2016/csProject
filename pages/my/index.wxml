@@ -1,0 +1,103 @@
+<!--pages/my/index.wxml-->
+<view class="myIndex_page">
+  <view class="header">
+    <image src="../../images/my/back.png"></image>
+    <view class="user_box" >
+      <image class="user_icon" src="{{urlPath}}?fileName={{avatarUrl}}" wx:if="{{ifLogin&&avatarUrl}}"></image>
+      <image class="user_icon" src="../../images/my/info.png" bindtap='toLoginPage' wx:if="{{!ifLogin}}"></image>
+      <image class="user_icon" src="../../images/common/cover.png" wx:if="{{ifLogin&&!avatarUrl}}"></image>
+      <!-- 皇冠 -->
+      <image class="king" wx:if="{{ifLogin&&vip==1}}" src="../../images/common/king.png"></image>
+    </view>
+    <view class="name"  wx:if="{{ifLogin}}" >{{account}}</view>
+    <view class="name" id="{{ifLogin?'':'login'}}" wx:else bindtap='toLoginPage'>登录</view>
+  </view>
+  <view class="bodys">
+    <view class="olisBox">
+      <view class="olis" bindtap="listPage" data-name="member">
+        <view class="iconsBox">
+          <image src="../../images/my/member.png"></image>
+        </view>
+        <view class="wordsBox" >
+          <view class="box">会员</view>
+          <view class="nextImg">
+            <view class="date" wx:if="{{ifLogin&&vip!=0&&vip!=null}}">{{date}}到期</view>
+            <image  src="../../images/my/arrow.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="olis" bindtap="listPage" data-name="mycourse">
+        <view class="iconsBox">
+          <image src="../../images/my/course.png"></image>
+        </view>
+        <view class="wordsBox" style="border-bottom: none">
+          <view class="box">我的课程</view>
+          <view class="nextImg">
+            <image  src="../../images/my/arrow.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="olisBox">
+      <view class="olis" bindtap="listPage" data-name="myorder">
+        <view class="iconsBox">
+          <image src="../../images/my/order.png"></image>
+        </view>
+        <view class="wordsBox">
+          <view class="box">我的订单</view>
+          <view class="nextImg">
+            <image  src="../../images/my/arrow.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="olis" bindtap="listPage" data-name="mycollect">
+        <view class="iconsBox">
+          <image src="../../images/my/collect.png"></image>
+        </view>
+        <view class="wordsBox">
+          <view class="box">我的收藏</view>
+          <view class="nextImg">
+            <image  src="../../images/my/arrow.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="olis" bindtap="wxLogin" >
+        <view class="iconsBox" >
+          <image src="../../images/my/phone.png"></image>
+        </view>
+        <view class="phone" wx:if="{{ifLogin&&phone}}">{{phone}}</view>
+        <button class="wxBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhone" wx:if="{{ifLogin}}">
+          <view class="box">绑定手机</view>
+          <view class="nextImg">
+            <image  src="../../images/my/arrow.png"></image>
+          </view>
+        </button>
+
+        <view class="wordsBox" style="border-bottom: none" wx:else bindtap="bindPhone">
+          <view class="box">绑定手机</view>
+          <view class="nextImg" >
+            <image  src="../../images/my/arrow.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+      
+    <view class="olisBox">
+      <navigator url="../feedback/feedback" >
+        <view class="olis">
+          <view class="iconsBox">
+            <image src="../../images/my/feedback.png"></image>
+          </view>
+          <view class="wordsBox" style="border-bottom: none">
+            <view class="box">意见反馈</view>
+            <view class="nextImg">
+              <image  src="../../images/my/arrow.png"></image>
+            </view>
+          </view>
+        </view>
+      </navigator>    
+    </view>
+
+    <view class="myExit" bindtap="loginOut" wx:if="{{ifLogin}}">退出登录</view>
+  </view>
+</view>

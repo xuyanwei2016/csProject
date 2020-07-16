@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "问答",
+  "navigationBarBackgroundColor": "#1A6FEE",
+  "navigationBarTextStyle": "white",
+  "component": true,
+  "usingComponents": {
+    "component":"../../components/list/resource"
+  }
+
+}

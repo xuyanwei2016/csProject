@@ -1,0 +1,28 @@
+<!--components/dialog/dialog.wxml-->
+<view class='bottom_dialog' wx:if="{{dialog}}">
+  <view class='bottom_box'>
+    <view class='bottom_title'>
+      <image src="{{imageUrl}}?fileName={{memberImg}}" class="bottom_icon" wx:if="{{memberImg}}"></image>
+      <image class="bottom_icon" src="../../images/common/cover.png" wx:else></image>
+      {{memberName}}<text>正在使用</text>微信支付
+      <image src='../../images/my/delete.png' class='del_icon' bindtap='close'></image>
+    </view>
+    <view class="member_renew_main">
+      <scroll-view class="member_renew_scroll" scroll-x="true" style="width:100%;">
+        <view class="member_scroll_view {{currentId==item.id?'hoverColor':''}}" wx:for="{{vipList}}" wx:key="index" bindtap="changePrice" data-id="{{item.id}}" data-sell="{{item.sellprice}}">
+          <view class="member_scroll_name">{{item.name}}</view>
+          <view class="mermber_price_box">
+            <view class="member_scroll_discount" wx:if="{{item.price}}">￥{{item.price}}</view>
+            <view class="{{item.price?'member_scroll_money':'member_scroll_money active'}}">
+              <text class="member_scroll_symbol">¥</text>
+              <text class="member_scroll_text" >{{item.sellprice}}</text>
+            </view>
+          </view>
+          <view class="member_scroll_save" wx:if="{{item.price}}">立省{{item.price-item.sellprice}}元</view>
+          <view class="member_scroll_reco" wx:if="{{item.price}}">推荐</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='wx_pay' bindtap="payBtn">微信支付</view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--register.wxml-->
+<view id="login_page">
+  <view class="header"></view>
+  <view class="bodys">
+  <view class="loginForm">
+    <view class="loginTips">注册</view>
+    <form>
+      <view class="page-section">
+        <image src="../../images/login/phone.png"></image>      
+        <input  name="phone"   placeholder-class="phcolor" bindblur="bindPhoneInput" placeholder="请输入手机号"/>       
+      </view>
+      <view class="page-section">
+        <image src="../../images/login/code.png"></image>    
+        <input  name="code"   placeholder-class="phcolor"  bindblur="bindCodeInput" placeholder="请输入验证码"/>
+        <view class="code" bindtap='getCode' wx:if="{{getCode}}">获取验证码</view>
+        <view class="code"  wx:else="{{getCode}}">({{second}})s秒后重新发送</view>      
+      </view>
+    </form>
+  </view>
+  <view class="loginBtn" bindtap='toLogin'>立即注册</view>
+  <view class="agreementBox">点击注册即表示您同意<view class="agreement" bindtap="userCon">《用户注册协议》</view></view> 
+  </view>
+</view>

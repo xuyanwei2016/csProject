@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "发帖",
+  "navigationBarBackgroundColor": "#F8F8F8",
+  "navigationBarTextStyle": "black",
+  "component": true,
+  "usingComponents": {
+    "titleBox": "../../components/title/title"
+  }
+}

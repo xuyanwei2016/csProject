@@ -1,0 +1,20 @@
+<view class='anwser_top'>
+  <view class='header_box'>
+    <view class='search_content'>
+      <image src='../../images/common/search.png' class='search_icon'></image>
+      <input type='text' placeholder='请输入关键词' class='search_input' bindinput='changeVal' bindconfirm="searchBtn" value="{{inputValue}}"></input>
+    </view>
+  </view>
+  <view class='filter_box'>
+    <view class="filter_text {{searchType == 1?'filter_hover':''}}" bindtap='setDataList' data-index="1" data-name="">默认</view>
+    <view class="filter_text {{searchType == 2?'filter_hover':''}}" bindtap="setDataList" data-index="2" data-name="browseNum desc">最热</view>
+    <view class="filter_text {{searchType == 3?'filter_hover':''}}" bindtap="setDataList" data-index="3" data-name="uploadTime desc">最新</view>
+    <view class="filter_text" bindtap='bindFilter'>
+      <text>筛选</text>
+      <image src='../../images/common/filter.png' class='filter_icon'></image>
+    </view>
+  </view>
+</view>
+<view class='anwser_main'>
+  <component pageList="{{resourceList}}" isLast="{{isLast}}" isNull="{{isNull}}"/>
+</view>

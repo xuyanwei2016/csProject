@@ -1,0 +1,43 @@
+/* pages/aboutUs/aboutUs.wxss */
+#about_page .logo{
+  width:146rpx;
+  height:146rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 1px 10px 0px rgba(123,123,123,0.28);
+  border-radius:20px;
+  margin: 0 auto;
+  margin-top: 78rpx;
+  margin-bottom: 25rpx;
+}
+#about_page .logo image{
+  height: 125rpx;
+  width: 137rpx;
+  margin: 0 auto;
+  margin-top: 12rpx;
+}
+#about_page .appName{
+  color: #212020;
+  font-size: 18px;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+#about_page .banben{
+  color: #BDC2CB;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 79rpx;
+}
+#about_page .desc{
+  color: #696969;
+  font-size: 14px;
+  margin-bottom: 145rpx;
+  padding: 0 40rpx;
+  line-height: 28px;
+  text-indent:30px;
+}
+#about_page .copy{
+  color: #C8CAD2;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 66rpx;
+}

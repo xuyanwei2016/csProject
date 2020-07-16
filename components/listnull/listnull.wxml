@@ -1,0 +1,5 @@
+<view class="review_nullBox" wx:if="{{isNull}}">
+  <image src='../../images/resourceDetails/review.png' class='review_nullIcon'></image>
+  <view class="review_nullText">暂无内容</view>
+</view>
+<view class='discover_over' wx:if="{{!isNull && isLast}}">—— 这是我的底线 ——</view>

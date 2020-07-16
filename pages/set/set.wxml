@@ -1,0 +1,21 @@
+<!--pages/set/set.wxml-->
+<view id="set_page">
+  <view class="olist" bindtap="toUs">
+    <view class="names">关于我们</view>
+    <image class="next" src="../../images/my/arrow.png"></image>
+  </view>
+  <view class="olist" bindtap="toFeedback">
+    <view class="names">意见反馈</view>
+    <image class="next" src="../../images/my/arrow.png"></image>
+  </view>
+  <view class="olist">
+    <button class="share" data-name="shareBtn"  open-type="share">
+      
+      <view class="names">推荐给好友</view>
+      <image class="next" src="../../images/my/arrow.png"></image>
+    </button>
+    
+  </view>
+
+  <view class="logout"  bindtap="signout">退出登录</view>
+</view>

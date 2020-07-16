@@ -1,0 +1,20 @@
+<view id="book_page">
+  <view wx:if="{{courseList && courseList.length>0}}">
+    <view class="collect_list"  bindtap="toDetails" wx:for="{{courseList}}" 
+      data-type="{{item.type}}" data-id='{{item.goodsid}}'>
+      <view class="collect_left">
+        <image class='collect_cover' src="{{otherImageUrl}}?fileName={{item.cover}}" wx:if="{{item.cover}}"></image>
+        <image class='collect_cover' src="../../images/course/cover.png" wx:else></image>
+      </view>
+      <view class="collect_right">
+        <view class="collect_text">{{item.name}}</view>
+        <view class="collect_progress">已学习{{item.schedule}}%</view>
+        <view class="collect_progress_box"><progress percent="{{item.schedule}}" color="#2579FF"/></view>
+      </view>
+    </view>
+  </view> 
+  <view wx:else class="resource_null">
+    <image src="../../images/resource/null.png" class="null_image"></image>
+    <view class="null_tips">您还没有购买过课程哦</view>
+  </view>
+</view>

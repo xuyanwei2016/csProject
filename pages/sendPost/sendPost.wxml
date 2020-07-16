@@ -1,0 +1,19 @@
+<view class="post_body">
+  <view class="post_title">
+    <text>标题</text>
+    <input placeholder="请输入标题" placeholder-class="phcolor" bindinput="bindTitleInput"></input>
+  </view>
+  <view class="post_content">
+    <textarea placeholder="请输入内容" placeholder-class="phcolor" bindinput="bindConInput" maxlength="2000"></textarea>
+    <view class='text_length'><text>{{listQuery.content.length}}/2000</text></view>
+  </view>
+  <view class="post_image">
+    <view class="post_image_title">选择图片</view>
+    <view class='post_img_box' wx:for="{{listQuery.imgList}}" wx:key="{{index}}">
+      <image class='post_img' src="{{imageUrl}}?fileName={{item}}"></image>
+      <image src='../../images/common/close.png' bindtap='delImage' class='post_close' data-index="{{index}}"></image>
+    </view>
+    <view class="post_upload" bindtap='setImage' wx:if="{{listQuery.imgList.length<3}}"></view>
+  </view>
+  <view class="post_btn" bindtap='sendInfo'>提交</view>
+</view>

@@ -1,0 +1,72 @@
+.filter_box{
+  position: relative;
+}
+.filter_content{
+  display: flex;
+  min-height: 100vh;
+  padding-bottom: 104rpx;
+}
+/* 左侧一级分类 */
+.filter_left{
+  width: 234rpx;
+  background: #F9F9FB;
+}
+.filter_left_list{
+  height: 106rpx;
+  line-height: 106rpx;
+  color: #8E8F91;
+  font-size: 14px;
+  font-weight: 500;
+}
+.filter_left_list text{
+  padding-left: 58rpx;
+}
+.filter_left_hover{
+  color: #326AD9;
+  background: #fff;
+}
+.filter_list_hover{
+  border-left: solid 8rpx #326AD9;
+}
+/* 右侧二级分类 */
+.filter_right{
+  flex:1;
+  background: #fff;
+  padding:0 48rpx;
+}
+.filter_right_list{
+  line-height: 1.8rem;
+  padding: 0.7rem 0;
+  color: #333333;
+  font-weight:500;
+  font-size: 16px;
+}
+.fliter_hover{
+  color: #326AD9;
+}
+/* 底部按钮 */
+.filter_btn{
+  position: fixed;
+  height: 104rpx;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.filter_reset,.filter_confirm{
+  width: 50%;
+  float: left;
+  height: 104rpx;
+  font-weight:500;
+  font-size: 15px;
+  text-align: center;
+  line-height: 104rpx;
+}
+.filter_reset{
+  background: #FFFFFF;
+  color: #333333;
+
+}
+.filter_confirm{
+  background: #326AD9;
+  color: #fff;
+}

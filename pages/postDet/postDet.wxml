@@ -1,0 +1,55 @@
+<view class='{{replyHide?"noscroll":""}}'>
+  <view class='post_top' fixed="true">
+    <view class='post_title'>{{pageData.title}}</view>
+    <view class='post_main'>
+      <image class='post_image' src="{{imageUrl}}?fileName={{pageData.userImg}}" wx:if="{{pageData.userImg}}"></image>
+      <image src='../../images/common/cover.png' class='post_image' wx:else></image>
+      <view class='post_name'>{{pageData.userName}}</view>
+      <view class='post_time'>{{pageData.releaseTime}}</view>
+      <view class='post_browse'>
+        <image src='../../images/common/browser.png' class='post_browse_icon'></image>
+        <text class='post_text' wx:if="{{pageData.browseNum}}">{{pageData.browseNum}}</text>
+      </view>
+      <view class='post_del' wx:if="{{pageData.isOwner == 1}}" bindtap='delPost'>
+        <image src='../../images/common/del.png' class='post_del_icon'></image>
+        <text class='post_text'>删除</text>
+      </view>
+    </view>
+  </view>
+  <view class='post_content' wx:if="{{content}}"><rich-text nodes="{{content}}"></rich-text></view>
+  <view wx:for="{{pageData.imgList}}" class="post_img">
+      <image src="{{imageUrl}}?fileName={{item}}" class="post_cover"></image>
+  </view>
+  <view class="post_review">
+    <view class="intro_title">
+      <view class='title_text'>评论</view>
+      <view class='title_num' wx:if="{{pageData.reviewNum>0}}">{{pageData.reviewNum}}</view>
+    </view>
+    <view class="intro_title">
+      <view class='title_text'>赞</view>
+      <view class='title_num' wx:if="{{pageData.fabulousNum>0}}">{{pageData.fabulousNum}}</view>
+    </view>
+  </view>
+  <view class="post_list">
+    <component reviewData="{{reviewData}}" bind:myList="myList" reviewType="{{reviewType}}" postId="{{listQuery.oid}}" listNull="{{listNull}}"/>
+    <view class='review_over' wx:if="{{pages<=listQuery.pageNum && pages != 0}}">—— 这是我的底线 ——</view>
+  </view>
+  <view class='post_bottom' style='padding-bottom:{{ isIphoneX ? 34 : 0 }}' wx:if="{{!replyHide}}">
+    <view class='input' bindtap='replyBtn'>回帖参与讨论</view>
+    <!-- <input placeholder='回帖参与讨论'  wx:if="{{!replyHide}}"></input> -->
+    <view class='post_aggre' bindtap="{{pageData.isAgree != 1?'agreeTap':''}}">
+      <image src='../../images/common/support_hover.png' class='agree_icon' wx:if="{{pageData.isAgree == 1}}"></image>
+      <image src='../../images/common/support.png' class='agree_icon' wx:else></image>
+      <text class="{{pageData.isAgree == 1?'agree_hover_text':'agree_text'}}">{{pageData.fabulousNum}}</text>
+    </view>
+  </view>
+  <view class='post_reply' wx:if="{{replyHide}}">
+    <view class='post_box'>
+      <view class='post_box_icon'>
+        <image src="../../images/common/delete.png" class='del_icon' bindtap='hideBox'></image>
+      </view>
+      <textarea auto-focus bindinput='replyCon' hold-keyboard="true" adjust-position="true" cursor-spacing="200" maxlength="300"></textarea>
+      <view class='reply_box'><view class='reply_btn' bindtap='sendMsg'>发送</view></view>
+    </view>
+  </view>
+</view>

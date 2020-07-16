@@ -1,0 +1,16 @@
+<!--pages/catalog/catalog.wxml-->
+<view id="catalog_page">
+  <view class="instro">
+    <view><image class="cover" src="{{urlPath}}?fileName={{cover}}"></image></view>
+    <view class="bookname">
+      <view class="name">{{name}}</view>
+      <view class="author">{{author}}</view>
+    </view>
+  </view>
+  <view class="catalog">
+    <view class="catalogList {{item.level==0?'':'marginR'}}" bindtap="toReader" wx:for="{{chapterList}}"  wx:key="{{index}}" data-markid="{{item.markid}}" data-index="{{index}}">
+      <view class="txt {{messageCode&&index>2?'gray':''}}">{{item.chapterName}}</view>
+      <image class="lock" wx:if="{{index>2&&messageCode}}" src="../../images/resource/lock.png"></image>
+    </view>
+  </view>
+</view>

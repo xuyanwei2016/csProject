@@ -1,0 +1,41 @@
+<view class="discover_sort">
+  <view class="discover_input" bindtap='resourceItem'>
+    <image src='../../images/common/search.png' class='search_image'></image> 
+    <input placeholder='请输入关键词' placeholder-class='placeholder'></input>
+  </view>
+  <view class="discover_nav">
+    <view class='nav_list' bindtap="resourcePage" data-query="{{item.text}}" data-type="{{item.type}}" wx:for="{{navList}}" wx:key="{{index}}">
+      <image class='nav_img' src='../../images/label/{{item.url}}.png'></image>
+      <view class='nav_text'>{{item.text}}</view>
+      <view class="nav_num">共{{item.num}}个问答</view>
+    </view>
+  </view>
+</view>
+<view class="discover_tab">
+  <text class="tab_name {{tabType == 'hot'?'hover_tab':''}} " bindtap='tabClick' data-type="hot">热门</text>
+  <text class="tab_name {{tabType == 'question'?'hover_tab':''}}" bindtap='tabClick' data-type="question">提问</text>
+</view>
+<view class="discover_list">
+  <view class='components_list' wx:for="{{exampleList}}" wx:key="{{item.index}}" bindtap="goDetails" data-id="{{item.id}}">
+    <view class="components_wrap">
+      <view class="components_left">
+        <view class='components_title'>
+          <text class="components_text_style" wx:if="{{item.topStatus == 1}}">【置顶】</text>
+          {{item.title}}
+        </view>
+        <view class='components_bottom'>
+          <text class="components_date">{{item.releaseTime}}</text>
+          <view class="components_browse">
+            <image src="../../images/common/review_icon.png" class="browse_icon"></image><text wx:if="{{item.replyNum}}">{{item.replyNum}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="components_image" wx:if="{{item.imgList && item.imgList.length>0}}">
+        <image src="{{imageUrl}}?fileName={{item.imgList[0]}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 列表为空 -->
+  <listNull isNull="{{isNull}}" isLast="{{hasNextPage}}"></listNull>
+</view>
+<view class='discover_send' bindtap='sendPost'>发帖</view>

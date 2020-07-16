@@ -1,0 +1,34 @@
+<view class='filter_box'>
+  <view class='filter_content'>
+    <view class="filter_left">
+      <view class="filter_left_list {{item.code == sortId ?'filter_left_hover':''}}" wx:for="{{sort}}" data-index="{{item.code}}" bindtap='sortTap' wx:key="{{item.code}}">
+        <text class="{{item.code == sortId ?'filter_list_hover':''}}">{{item.showName}}</text>
+      </view>
+      <view class="filter_left_list {{item.labelId == labelId ?'filter_left_hover':''}}" wx:for="{{label}}" data-index="{{item.labelId}}" bindtap='labelTap' wx:key="{{item.labelId}}">
+        <text class="{{item.labelId == labelId ?'filter_list_hover':''}}">{{item.name}}</text>
+      </view>
+    </view>
+    <view class="filter_right">
+      <view class="filter_right_list" wx:for="{{dataList}}" wx:key="{{item.id}}">
+        <view wx:if="{{sortId}}" bindtap='sortWord' data-code="{{item.code}}" class="{{m1.fn(diyTypeCode, item.code).indexOf ? 'fliter_hover':''}}">{{item.showName}}</view>
+        <view wx:else bindtap='labelWord' data-id="{{item.id}}" class="{{m1.fn(labelContentDiyTypeId, item.id).indexOf ? 'fliter_hover':''}}">{{item.labelContent}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='filter_btn'>
+    <view class='filter_reset' bindtap='resetBtn'>重置</view>
+    <view class='filter_confirm' bindtap='filterBtn'>确定</view>
+  </view>
+</view>
+
+<wxs module="m1">
+  function fn(arr, arg) {
+    var result = {
+      indexOf: false,
+    }
+    result.indexOf = arr.indexOf(arg) > -1;
+    return result;
+  }
+  module.exports.fn = fn;
+</wxs>
+

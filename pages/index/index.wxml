@@ -1,0 +1,101 @@
+<!--index.wxml-->
+<view class="index">
+  <!-- search_box -->
+  <view class='search_box' bindtap='resourceItem'>
+    <image src='../../images/index/search.png' class='search_image'></image> 
+    <text>请输入关键字</text>
+  </view>
+  <!-- banner_box -->
+  <view class="index_banner">
+    <swiper class='index_swiper' indicator-dots='true' indicator-color='red' indicator-active-color='yellow' 
+      autoplay='true'  circular='true' indicator-color='#7FA4E5' indicator-active-color='#EAF0FB'>
+      <swiper-item wx:for="{{adsList}}" wx:key="{{item.id}}" bindtap="toUrl" data-url="{{item.url}}">
+          <image class='swiper_img' src="{{imageUrl}}?fileName={{item.picture}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- <web-view src="https://live.vhall.com/webinar/inituser/399645337"></web-view> -->
+  <!-- nav_box -->
+  <view class="nav_box">
+    <view class='nav_list' bindtap="labelPage" data-query="{{item.text}}" wx:for="{{navList}}"  wx:key="{{index}}">
+      <image class='nav_img' src='../../images/index/{{item.url}}.png'></image>
+      <view class='nav_text'>{{item.text}}</view>
+    </view>
+  </view>
+  <!-- 热门课程 -->
+  <view class="index_course">
+    <view class='common_title' >
+      <view class='common_left'>热门课程</view>
+      <view class='common_right' bindtap="coursePage" data-type="2">更多 <image src='../../images/index/more.png'></image></view>
+    </view>
+    <view class="course_list" wx:for="{{courseList}}" bindtap="courseDetails" data-id="{{item.id}}" wx:key="{{index}}">
+      <image class='course_cover' src="{{otherImageUrl}}?fileName={{item.cover}}" wx:if="{{item.cover}}"></image>
+      <image class='course_cover' src='../../images/course/cover.png' wx:else></image>
+      <view class="course_bottom">
+        <view class="course_name">{{item.courseName}}</view>
+        <view class="course_intro" wx:if="{{item.synopsis}}">{{item.synopsis}}</view>
+        <view class="course_price">
+          <text class="course_realprice">
+            <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.price}}</text>
+            <text wx:else style='color:#0AB562'>免费</text>
+          </text>
+          <text class='course_lineprice' wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+          <view class="course_browse"><image src="../../images/index/browse.png" class="browse_icon"></image>{{item.clickNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 名师直播 -->
+  <view class="index_live" wx:if="{{ liveList && liveList.length>0 }}">
+    <view class='common_title' >
+      <view class='common_left'>名师直播</view>
+      <view class='common_right' bindtap="livePage" data-type="2">更多 <image src='../../images/index/more.png'></image></view>
+    </view>
+    <view class="live_list" wx:for="{{liveList}}" wx:key="{{item.index}}">
+      <view bindtap="liveDeatils" data-type="{{item.liveStatus}}" data-id="{{item.resId}}" data-liveid="{{item.whId}}" code="{{item.code}}" style="overflow:hidden;">
+        <view class="live_cover_box">
+          <image src='{{liveImg}}file/?fileName={{item.resImg}}' class="live_cover"></image>
+          <view class="live_tips {{item.liveStatus == 1?'fir':item.liveStatus == 2?'sec':''}}">{{liveTip[item.liveStatus]}}</view>
+        </view>
+        <view class="live_bottom">
+          <view class="live_name">{{item.resName}}</view>
+          <!-- <view class="live_author">讲师: {{item.updaterName}}</view> -->
+          <view class="live_intro">
+            <text>授课时间：{{item.liveTimeFormat}}</text>
+            <!--  1直播 2预告 3结束 -->
+            <!-- <view class="live_btn">{{liveText[item.liveStatus]}}</view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--精选专题  -->
+  <view class='index_subject'>
+    <view class='common_title'>
+      <view class='common_left'>精选专题</view>
+      <view class='common_right' bindtap="specialItem" style="margin-right:30rpx">更多
+       <image src='../../images/index/more.png'></image></view>
+      </view>
+    <view class='subject_list'>
+      <scroll-view class="common_scroll" scroll-x="true" bindscroll="scroll" >
+        <view class="subject_scroll_view" wx:for="{{specialList}}" wx:key="{{item.index}}" bindtap="goSpecialDetails" data-id="{{item.id}}" data-name="{{item.name}}" data-type="{{item.template}}">
+          <image src='{{imageUrl}}?fileName={{item.cover}}'></image>
+          <view class='subject_scroll_synopsis'> 
+            <view class='subject_synopsis_title'>{{item.name}}</view>
+            <view class='subject_synopsis_con'>{{item.content}}</view>
+          </view>  
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!--实操实例  -->
+  <view class='index_example'>
+    <view class='common_title' >
+      <view class='common_left'>实操案例</view>
+      <!-- <view class='common_right' bindtap="resourcePage" data-type="32">更多 <image src='../../images/index/more.png'></image></view> -->
+    </view>
+    <component dataList="{{exampleList}}" bind:goDetails="goDetails"/>
+  </view>
+  <view class="index_bottom">—— 这是我的底线 ——</view>
+</view>
+

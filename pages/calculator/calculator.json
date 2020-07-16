@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个税计算器",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "enablePullDownRefresh": false
+  
+}

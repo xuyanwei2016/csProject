@@ -1,0 +1,241 @@
+.resource_body{
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 10rpx;
+}
+.resource_main{
+  padding-top: 360rpx;
+}
+/*headerbox*/
+.header_box{
+  overflow: hidden;
+  background:linear-gradient(0deg,rgba(72,180,249,1) 0%,rgba(25,111,238,1) 100%);
+  background-size: 100% 100%;
+  padding-top: 10rpx;
+}
+/*搜索box*/
+.search_box{
+  height: 66rpx;
+}
+.search_box .search_content{
+  background: #fff;
+  width: 94%;
+  margin: 0 3%;
+  border-radius:33rpx;
+  margin-right: 40rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  color: #939393;
+}
+/* .search_box .search_input{
+  font-size: 14px;
+  width: 70%;
+  height: 74rpx;
+  line-height: 74rpx;
+} */
+.search_box .search_icon{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin: 22rpx;
+}
+/* input---placeholder---webkit */
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #B4B9C3;
+}
+/* 头部滑动导航 */
+.nav_box{
+  width:100%;
+  height: 100rpx;
+  overflow: hidden;
+}
+.nav_content{
+  white-space:nowrap;
+  width: 100%;
+  padding:0 10px;
+  box-sizing: border-box;
+}
+.nav_name{
+  display:inline-block;
+  font-size:15px;
+  color: #D4ECFF;
+  padding:0 40rpx;
+  font-weight: 500;
+  line-height: 97rpx;
+  position: relative;
+}
+.nav_name:first-child{
+  padding-left: 15rpx;
+}
+.nav_name:last-child{
+  padding-left: 15rpx;
+}
+.nav_hover{
+  /* border-bottom:solid 2px #fff; */
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+.nav_hover::after {
+  content: '';
+  display: block;
+  width: 40rpx;
+  height: 6rpx;
+  background: #fff;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-top: -14rpx;
+}
+/* 筛选box */
+.filter_box{
+  border-bottom: solid 1px #E3E3E3;
+  height: 92rpx;
+  line-height: 92rpx;
+  text-align: center;
+  display: flex;
+}
+.filter_box .filter_text{
+  flex: 1;
+  font-weight:500;
+  color: #666;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.last_filter{
+    border-left: solid 1px #E3E3E3;
+}
+.filter_box .filter_hover{
+  color: #1873EF;
+  font-weight:bold;
+}
+.filter_box .filter_icon{
+  width: 22rpx;
+  height: 23rpx;
+  margin-left: 10rpx;
+}
+.resource_box{
+  padding: 0 24rpx;
+}
+.resource_list{
+  padding: 30rpx 0;
+  border-bottom: solid 1px #EEEEEE;
+  display: flex;
+}
+/* 文章 */
+.resource_article_left{
+  width: 204rpx;
+  height: 151rpx;
+  margin-right: 24rpx;
+}
+.resource_article_left .article_icon{
+  max-width: 204rpx;
+  max-height: 151rpx;
+}
+.resource_article_right{
+  flex: 1;
+}
+/* 公共样式 */
+.name_box{
+  font-size:15px;
+  font-weight:500;
+  color:rgba(33,32,32,1);
+  line-height:46rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.content_box{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+  color: #666;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+.read_box{
+  color: #BDC2CB;
+  font-size: 11px;
+  margin-top: 10rpx;
+}
+.read_icon{
+  width: 24rpx;
+  height: 16rpx;
+  margin-right: 9rpx;
+}
+.author_box{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+  font-weight:500;
+  color: #BDC2CB;
+  margin-top: 50rpx;
+}
+
+/* 图书 */
+.resource_book_left{
+  width: 153rpx;
+  height: 206rpx;
+  margin-right: 27rpx;
+}
+.resource_book_left .book_icon{
+  max-width: 153rpx;
+  max-height: 206rpx;
+}
+.resource_book_right{
+  flex: 1;
+}
+/* 微课 */
+.resource_class_left{
+  width: 250rpx;
+  height: 180rpx;
+  margin-right: 27rpx;
+}
+.resource_class_left .class_icon{
+  max-width: 250rpx;
+  max-height: 180rpx;
+}
+.resource_class_right{
+  flex: 1;
+}
+.resource_class_right .class_read{
+  margin-top: 100rpx;
+}
+
+.resource_null{
+  text-align: center;
+}
+.resource_null .null_image{
+  width: 435rpx;
+  height: 409rpx;
+  margin: 0 auto;
+  font-weight:500;
+  margin-top: 180rpx;
+}
+.resource_null .null_text{
+  margin-top: 50rpx;
+  color: #696969;
+  font-size: 16px;
+}
+.resource_null .null_tips{
+  margin-top: 19rpx;
+  color: #BDC2CB;
+  font-size: 14px;
+}
+.total_resource{
+  color: #BDC1CB;
+  font-size: 12px;
+  font-weight:500;
+  line-height:48rpx;
+  margin-left: 30rpx;
+  margin-top: 34rpx;
+}

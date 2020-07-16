@@ -1,0 +1,87 @@
+.order_details{
+  overflow: hidden;
+  background: #F8F8F8;
+  min-height: 100vh;
+}
+/* 订单顶部状态 */
+.order_text{
+  background: url('http://www.zgsccbs.com/skz/program/order_bg.png') ;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 220rpx;
+  padding-top: 60rpx;
+  padding-left: 30rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  color: #fff;
+}
+.complate_icon{
+  height: 36rpx;
+  width: 36rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+/* 订单信息 */
+.order_info{
+  margin: 0 4%;
+  border-radius:20rpx;
+  background: #fff;
+  margin-top: -118rpx;
+  padding: 33rpx 30rpx;
+  box-shadow:0px 2px 40px 0px rgba(127,127,127,0.04);
+}
+.order_top{
+  overflow: hidden;
+  clear: both;
+}
+.order_cover{
+  width: 256rpx;
+  height: 170rpx;
+  float: left;
+  margin-right: 28rpx;
+}
+.order_name{
+  color: #202021;
+  font-weight:bold;
+  font-size: 15px;
+}
+.order_price{
+  color:#999999;
+  font-size: 12px;
+  font-weight:500;
+  line-height:40rpx;
+  margin-top: 20rpx;
+}
+.order_price text{
+  float: right;
+}
+.order_total{
+  color: #333333;
+  font-weight:500;
+  line-height:40rpx;
+  margin-top: 20rpx;
+  font-size: 15px;
+}
+.order_total text{
+  float: right;
+  color: #FE2023;
+  font-size: 17px;
+}
+/* 订单编号 */
+.order_main{
+  border-radius:20rpx;
+  background: #fff;
+  margin: 0 4%;
+  margin-top: 10rpx;
+  font-size: 12px;
+}
+.order_list{
+  height: 83rpx;
+  line-height: 83rpx;
+  color:#333333;
+  border-bottom: solid 1px #EBEBEB;
+  margin: 0 30rpx;
+}
+.order_list .text{
+  color: #999999;
+}

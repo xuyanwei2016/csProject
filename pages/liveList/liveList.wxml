@@ -1,0 +1,22 @@
+<view class="excellent_box">
+  <view class="other_course" wx:for="{{dataList}}" wx:key="{{index}}" 
+    bindtap='liveDet' data-id="{{item.id}}" data-type="{{item.liveStatus}}" data-code="{{item.messageCode}}" data-liveid="{{item.whId}}">
+    <view class="other_cover">
+      <image class='nav_img' src='{{otherImageUrl}}?fileName={{item.cover}}' wx:if="{{item.cover}}"></image>
+      <image class='nav_img' src='../../images/course/cover.png' wx:if="{{!item.cover}}"></image>
+      <view class="live_tips {{item.liveStatus == 1?'fir':item.liveStatus == 2?'sec':''}}">{{liveTip[item.liveStatus]}}</view>
+    </view>
+    <view class="other_bottom">
+      <view class="other_name"><view class='other_text'>{{item.title}}</view></view>
+      <view class="other_times">{{item.liveTimeFormat}}</view>
+      <view class="other_price">
+        <text class="other_realprice">
+          <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.sellPrice}}</text>
+          <text wx:else style='color:#0AB562'>免费</text>
+        </text>
+        <text class="other_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+      </view>
+    </view>
+  </view>
+  <listNull isNull="{{isNull}}" isLast="{{isLast}}"></listNull>
+</view>

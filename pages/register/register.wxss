@@ -1,0 +1,93 @@
+/* pages/register/register.wxss */
+page{
+  overflow: hidden;
+}
+#login_page{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#login_page .header{
+  height: 390rpx;
+  width: 100%;
+  background: url("http://www.zgsccbs.com/skz/program/login_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+#login_page .bodys{
+  padding: 0 50rpx 50rpx;
+  text-align: center;
+}
+#login_page .loginForm{
+  height:510rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 20px 37px 13px rgba(87,149,255,0.1);
+  border-radius:10px;
+  margin-top: -44rpx;
+  padding: 8rpx 24rpx;
+}
+#login_page .loginBtn{
+  width:480rpx;
+  height:80rpx;
+  background:rgba(75,138,247,1);
+  border-radius:40px;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  color: white;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+#login_page .loginTips{
+  font-size: 24px;
+  text-align: left;
+  padding-left: 9px;
+  margin-top: 24px;
+  margin-bottom: 30rpx;
+}
+#login_page .page-section{
+  height: 109rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#login_page .page-section input{
+  line-height: 109rpx;
+  color: #CACED5;
+  height: 100%;
+  flex: 1;
+  text-align: left;
+}
+#login_page .page-section image{
+  height: 30rpx;
+  width: 24rpx;
+  margin-left: 17rpx;
+  margin-right: 30rpx;
+}
+#login_page .code{
+  color: #2A6AD7;
+  font-size: 14px;
+  height: 109rpx;
+  min-width: 197rpx;
+  text-align: center;
+  line-height: 109rpx;
+}
+.phcolor{
+  color: #CACED5;
+}
+#login_page .register{
+  margin-top: 47rpx;
+  text-align: center;
+  color: #2A6AD7;
+}
+#login_page .agreementBox{
+  margin: 160rpx 0 50rpx;
+  display: flex;
+  font-size: 12px;
+  color: #C8CAD2;
+  justify-content: center;
+}
+#login_page .agreement{
+  color: #2A6AD7;
+}

@@ -1,0 +1,8 @@
+/* pages/zcAgreement/zcAgreement.wxss */
+#page_agree{
+  padding: 44rpx;
+  color: #696969;
+  font-size: 14px;
+  line-height: 28px;
+  text-indent:30px;
+}

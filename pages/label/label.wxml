@@ -1,0 +1,12 @@
+<view class='label'>
+  <view class='label_list' bindtap='detailsBind' wx:for="{{labelList}}" wx:key="{{item.id}}" 
+    data-title="{{item.labelContent}}" data-oid="{{item.id}}" wx:for-index="index" 
+  >
+    <image class='label_img' wx:if='{{item.img == null}}' src='../../images/label/label_default.png'></image>
+    <image class='label_img' wx:else src="{{imageUrl}}?fileName={{item.img}}"></image>
+    <view class='label_words'>
+      <view class='label_words_text01'>{{item.labelContent}}</view>
+      <view class='label_words_text02'>共{{item.resourceNum}}个资源</view>
+    </view>
+  </view>
+</view> 

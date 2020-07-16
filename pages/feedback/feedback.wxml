@@ -1,0 +1,14 @@
+<view id="feedback_page">
+  <view class="section">
+    <textarea  placeholder-class="phcolor" bindblur="getText" maxlength="300" placeholder="您的宝贵意见或建议..." />
+  </view>
+  <view class="post_image">
+    <view class="post_image_title">上传图片<text wx:if="{{listQuery.imgList.length>0}}">（{{listQuery.imgList.length}}）</text></view>
+    <view class='post_img_box' wx:for="{{listQuery.imgList}}" wx:key="{{index}}">
+      <image class='post_img' src="{{imageUrl}}?fileName={{item}}"></image>
+      <image src='../../images/common/close.png' bindtap='delImage' class='post_close' data-index="{{index}}"></image>
+    </view>
+    <view class="post_upload" bindtap='setImage' wx:if="{{listQuery.imgList.length<3}}"></view>
+  </view>
+  <view class="submit" bindtap="submit">提交</view>
+</view>

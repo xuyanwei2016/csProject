@@ -1,0 +1,73 @@
+/* pages/anwser/anwser.wxss */
+.anwser_top{
+  height: 206rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.anwser_main{
+  padding-top:206rpx; 
+}
+.filter_box{
+  border-bottom: solid 1px #E3E3E3;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #fff;
+}
+.filter_box .filter_text{
+  float: left;
+  width: 25%;
+  font-weight:500;
+  color: #777;
+  box-sizing: border-box;
+}
+.filter_box .filter_hover{
+  color: #4285F4;
+}
+.filter_box .filter_icon{
+  width: 22rpx;
+  height: 23rpx;
+  margin-left: 10rpx;
+}
+/*headerbox*/
+.header_box{
+  overflow: hidden;
+  background: #1A6FEE;
+  background-size: 100% 100%;
+  height: 124rpx;
+}
+.header_box .search_content{
+  background: #fff;
+  width: 94%;
+  margin: 20rpx 3%;
+  border-radius:33rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+}
+.header_box .search_input{
+  font-size: 14px;
+  width: 70%;
+  height: 74rpx;
+  line-height: 74rpx;
+}
+.header_box .search_icon{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin: 22rpx;
+}
+/* input---placeholder---webkit */
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #B4B9C3;
+}
+.label_over{
+  margin: 35rpx auto 44rpx;
+  color: #D5D7E0;
+  font-size: 12px;
+  font-weight:500;
+  line-height: 40rpx;
+  text-align: center;
+}

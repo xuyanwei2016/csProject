@@ -1,0 +1,41 @@
+<view class="live_details">
+  <view class="live_autoBox">
+    <view class="cover">
+      <image class='cover_img' src="{{liveImg}}file/?fileName={{pageData.cover}}" wx:if="{{pageData.cover}}"></image>
+      <image class='cover_img' src='../../images/course/cover.png' wx:else></image>
+    </view>
+    <view class='course_main'>
+      <view class='course_name'>{{pageData.title}}</view>
+      <view class='price_con'>
+        <view class='course_price'>
+          <text wx:if="{{pageData.sellPrice>0}}" style='color:#E40000'>￥{{pageData.sellPrice}}</text>
+          <text wx:else style='color:#0AB562'>免费</text>
+          <text class='course_lineprice' wx:if="{{pageData.linePrice}}">￥{{pageData.linePrice}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="intro" wx:if="{{pageData.introduction}}"><text>简介</text></view>
+    <view class='detail_content' wx:if="{{pageData.introduction}}"><rich-text nodes="{{pageData.introduction}}"></rich-text></view>
+  </view>
+  <view wx:if="{{pageData.messageCode == null}}">
+    <view class='bottom_btn' bindtap="payBtn" bindtap="goLive" data-id="{{pageData.whId}}">
+      进入直播间
+    </view>
+  </view>
+  <view wx:else class="{{isIphoneX?'live_bottom':'live_btn'}}">
+    <view >
+      <view class='bottom_btn' bindtap='wxLogin' wx:if="{{ifLogin}}">
+        <button class="wxBtn" wx:if="{{phone}}">
+          <image src='../../images/courseDetails/pay.png' class='pay_ico'></image>立即支付
+        </button>
+        <button class="wxBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:else>
+          <image src='../../images/courseDetails/pay.png' class='pay_ico'></image>立即支付
+        </button>
+      </view>
+      <!-- 购买 -->
+      <view class='bottom_btn' wx:else bindtap="payBtn">
+        <image src='../../images/courseDetails/pay.png' class='pay_icon'></image>立即支付
+      </view>
+    </view>
+  </view>
+</view>

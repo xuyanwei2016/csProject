@@ -1,0 +1,144 @@
+.body_box{
+  overflow: hidden;
+  background: url(http://www.zgsccbs.com/skz/program/gsjsq.png) #F2F7FA;
+  background-size: 100% 283rpx;
+  background-repeat: no-repeat;
+  padding-bottom: 62rpx;
+}
+.main_box{
+  background: #fff;
+  overflow: hidden;
+  padding: 40rpx 30rpx 50rpx;
+  margin: 0 30rpx;
+  border-radius:10rpx;
+  margin-top: 223rpx;
+  box-shadow:0px 2px 50px 0px rgba(0,144,255,0.06);
+}
+.tab_nav{
+  width: 50%;
+  float:left;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  font-weight:500;
+  line-height:64rpx;
+  overflow: hidden;
+  margin-bottom: 67rpx;
+}
+.bottom_line{
+  width: 80rpx;
+  height: 6rpx;
+  background: #316AD8;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.hover_nav{
+  color: #316AD8;
+  font-weight:bold;
+  font-size: 15px;
+}
+.box_title{
+  font-size: 14px;
+  color: #333333;
+  font-weight:500;
+  clear: both;
+  margin-top: 50rpx;
+}
+.money{
+  border-bottom: solid 1px #ECF0F7;
+  padding-bottom: 30rpx;
+  margin-top: 40rpx;
+  color: #333333;
+  font-weight:500;
+  font-size: 14px;
+}
+/* 所得税 */
+.calculator_top{
+  overflow: hidden;
+  margin: 35rpx 0 25rpx;
+}
+.calculator_title{
+  color: #7B7C89;
+  font-size: 12px;
+  font-weight:500;
+  clear: both;
+  overflow: hidden;
+  line-height: 50rpx;
+}
+.calculator_left{
+  float: left;
+}
+.calculator_right{
+  float: right;
+}
+/* 实发工资 */
+.real_price{
+  color: #333333;
+  font-size: 15px;
+  font-weight:500;
+}
+.real_left{
+  float: left;
+}
+.real_right{
+  color: #FE2023;
+  font-size: 16px;
+  float: right;
+}
+/* 表格 */
+.table_box{
+  overflow: hidden;
+  background: #fff;
+  margin: 28rpx 30rpx 45rpx;
+  box-shadow:0px 2px 50px 0px rgba(0,144,255,0.06);
+  border-radius:10rpx;
+  font-size: 14px;
+}
+.tbale_th,.tbale_td{
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: center;
+}
+.tbale_th{
+  background: #FCFBFB;
+  border-bottom: solid 1px #EBEBEB;
+  color: #333333;
+}
+.tbale_td{
+  color: #666666;
+  border-bottom: solid 1px #EBEBEB;
+}
+.tbale_td:last-child{
+  border-bottom: none;
+}
+.table_fir{
+  float: left;
+  width: 14%;
+  text-align: center;
+}
+.table_sec{
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+.table_third{
+  float: left;
+  width: 12%;
+  text-align: center;
+  margin-left: 6%;
+}
+.table_forth{
+  float: left;
+  width: 28%;
+  text-align: center;
+}
+.tip_box{
+  color: #7B7C89;
+  font-size: 14px;
+  font-weight:500;
+  line-height:62rpx;
+  margin-left: 60rpx;
+}
+.tip_box text{
+  color: #F5861A;
+}

@@ -1,0 +1,9 @@
+<view id="about_page">
+  <view class="logo">
+    <image src="../../images/my/logo.png"></image>
+  </view>
+  <view class="appName">财税专家</view>
+  <view class="banben">版本：{{banben}}</view>
+  <view class="desc"><rich-text nodes="{{desc}}"></rich-text></view>
+  <view class="copy"><rich-text nodes="{{copy}}"></rich-text></view>
+</view>

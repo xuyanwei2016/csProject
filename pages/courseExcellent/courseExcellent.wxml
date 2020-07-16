@@ -1,0 +1,19 @@
+<view class="excellent_box">
+  <view class="other_course" wx:for="{{dataList}}" bindtap='courseDet' data-id="{{item.resId}}" data-type="{{item.resType}}">
+    <view class="other_cover">
+      <image class='nav_img' src="{{otherImageUrl}}?fileName={{item.resImg}}" wx:if="{{item.resImg}}"></image>
+      <image class='nav_img' src='../../images/course/cover.png' wx:else></image>
+    </view>
+    <view class="other_bottom">
+      <view class="other_name_box"> <view class="other_name">{{item.resName}}</view></view>
+      <view class="other_price">
+        <text class="other_realprice">
+          <text wx:if="{{item.price>0}}" style='color:#E40000'>￥{{item.price}}</text>
+          <text wx:else style='color:#0AB562'>免费</text>
+        </text>
+        <text class="other_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+        <view class="other_browse"><image src="../../images/index/browse.png" class="browse_icon"></image>{{item.clickNum}}</view>
+      </view>
+    </view>
+  </view>
+</view>

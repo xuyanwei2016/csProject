@@ -1,0 +1,150 @@
+review_nullBox.course_page{
+  border-top: solid 1px #1A6FEE;
+}
+.other_course{
+  display: flex;
+  border-bottom: solid 1px #EEEEEE;
+  padding: 28rpx 0;
+  margin: 0 30rpx;
+}
+.other_cover{
+  width: 300rpx;
+  margin-right: 24rpx;
+}
+.other_cover image{
+  width: 300rpx;
+  height: 200rpx;
+}
+.other_bottom{
+  flex:1;
+}
+.other_name{
+  min-height: 155rpx;
+  color: #202021;
+  font-weight:bold;
+  line-height: 44rpx;
+  font-size: 15px;
+}
+.other_text{
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+}
+.other_price{
+  font-size: 12px;
+}
+.other_realprice{
+  color: #FE2023;
+  font-size: 14px;
+  line-height:40rpx;
+  margin-right: 15rpx;
+  font-weight:500;
+}
+.other_lineprice{
+  text-decoration: line-through;
+  color: #9C9D9C;
+}
+.other_browse{
+  float: right;
+  color: #BDBEBD;
+  margin-top: 5rpx;
+}
+.browse_icon{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 7rpx; 
+}
+/* 好课推荐 */
+.recommend_box{
+  border-top: solid 16rpx #EDEEF0; 
+}
+.recommend_course{
+  display: flex;
+  border-bottom: solid 1px #EEEEEE;
+  padding: 28rpx 30rpx;
+}
+.recommend_cover{
+  width: 300rpx;
+  margin-right: 24rpx;
+}
+.recommend_cover image{
+  width: 300rpx;
+  height: 200rpx;
+}
+.recommend_bottom{
+  flex:1;
+  position: relative;
+}
+.recommend_name{
+  height: 155rpx;
+  color: #202021;
+  font-weight:bold;
+  line-height: 44rpx;
+  font-size: 15px;
+}
+.recommend_price{
+  font-size: 12px;
+  position: absolute;
+  top: 100rpx;
+  left: 0;
+}
+.recommend_realprice{
+  color: #FE2023;
+  font-size: 14px;
+  font-weight:500;
+  line-height:40rpx;
+  margin-right: 25rpx;
+  
+}
+.recommend_lineprice{
+  text-decoration: line-through;
+  color: #9C9D9C;
+}
+.recommend_details{
+  position: absolute;
+  top: 174rpx;
+  left: 0;
+  font-size: 11px;
+  width: 100%;
+}
+.recommend_chapter{
+  float: left;
+  color: #9C9D9C;
+}
+.recommend_browse{
+  float: right;
+  color: #BDBEBD;
+}
+.browse_icon{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 7rpx; 
+}
+/* 底线 */
+.course_over{
+  margin: 35rpx auto 44rpx;
+  color: #D5D7E0;
+  font-size: 12px;
+  font-weight:500;
+  line-height: 40rpx;
+  text-align: center;
+}
+/* 暂无推荐 */
+.review_nullBox{
+  text-align: center;
+  margin-top: 100rpx;
+}
+.review_nullIcon{
+  height: 252rpx;
+  width: 282rpx;
+  margin: 40rpx 31%;
+}
+.review_nullText{
+  color: #BDC2CB;
+  font-weight: 500;
+  margin-bottom: 40rpx;
+}

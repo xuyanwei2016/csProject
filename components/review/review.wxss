@@ -1,0 +1,100 @@
+/* 评论 */
+.class_review{
+  background: #fff;
+  padding: 40rpx 25rpx;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.intro_title{
+  color: #333333;
+  font-size:17px;
+  font-weight:bold;
+}
+.review_input{
+  width: 100%;
+  border:1px solid rgba(231,236,239,1);
+  border-radius:33px;
+  margin-top: 40rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  margin-bottom: 10rpx;
+}
+.review_input_text{
+  color: #C8CAD2;
+  padding-left: 29rpx;
+
+}
+.review_list{
+  border-bottom: solid 1px #EEEEEE;
+  padding: 30rpx 0;
+}
+.review_topBox{
+  color: #333;
+  overflow: hidden;
+  font-size: 15px;
+}
+.header{
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  float: left
+}
+.name{
+  margin-left: 15rpx;
+}
+.start_box{
+  float: right;
+}
+.start{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 8rpx;
+}
+.review_intro{
+  color: #777777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  margin-top: 12rpx;
+  font-weight:500;
+  line-height:46rpx;
+  margin-left: 70rpx;
+  font-size: 14px;
+}
+.review_bottom{
+  color: #BDC1CB;
+  margin-top: 36rpx;
+  margin-left: 70rpx;
+  font-size: 12px;
+}
+.fav_content,.review_content{
+  float: right;
+}
+.review_content{
+  margin-right: 40rpx;
+}
+.review_icon,.fav_icon{
+  width:24rpx;
+  height:21rpx;
+  margin-right: 10rpx;
+}
+.look_review{
+  color: #C8CAD2;
+  margin: 40rpx 0;
+  text-align: center;
+}
+.review_nullBox{
+  text-align: center;
+}
+.review_nullIcon{
+  height: 252rpx;
+  width: 282rpx;
+  margin: 40rpx 31%;
+}
+.review_nullText{
+  color: #BDC2CB;
+  font-weight: 500;
+  margin-bottom: 40rpx;
+}

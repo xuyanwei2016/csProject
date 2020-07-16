@@ -1,0 +1,169 @@
+<view class='course_details'>
+  <view class="course_autoBox">
+    <view class="course_cover">
+      <image class='cover' src="{{urlPath}}?fileName={{pageData.cover}}" wx:if="{{pageData.cover}}"></image>
+      <image class='cover' src='../../images/course/cover.png' wx:else></image>
+    </view>
+    <view class='course_main'>
+      <view class='course_name'>{{pageData.courseName}}</view>
+      <view class='course_con'>
+        <view class='chapter_box'>
+          <image src='../../images/common/chapter.png' class='chapter_icon'></image>
+          已更新{{pageData.updatePeriods}}节<text class='split_class'>|</text>共{{pageData.totalPeriods}}节
+        </view>
+        <view class='browse_box'>
+          <image src='../../images/index/browse.png' class='browse_icon'></image>{{pageData.clickNum }}
+        </view>
+      </view>
+      <view class='price_con'>
+        <view class='course_price'>
+          <text wx:if="{{pageData.price>0}}" style='color:#E40000'>￥{{pageData.price}}</text>
+          <text wx:else style='color:#0AB562'>免费</text>
+          <text class='course_lineprice' wx:if="{{pageData.linePrice}}">￥{{pageData.linePrice}}</text>
+        </view>
+        <image src='../../images/common/share.png' class='share_icon' bindtap="sharePic"></image>
+        <image src='../../images/common/collect.png' class='collect_icon' bindtap='collect' wx:if="{{pageData.isCollection == 1}}"></image>
+        <image src='../../images/common/collect_default.png' class='collect_icon' bindtap='collect' wx:else></image>
+      </view>
+    </view>
+    <view class='course_title'>
+      <view class="title {{tabType == 'list'?'hover_color':''}}" bindtap='changeTab' data-type="list">
+        目录({{pageData.list.length}})
+        <view class='bottom_line' wx:if="{{tabType == 'list'}}"></view>
+      </view>
+      <view class="title {{tabType == 'detail'?'hover_color':''}}" bindtap='changeTab' data-type="detail">
+        详情
+        <view class='bottom_line' wx:if="{{tabType == 'detail'}}"></view>
+      </view>
+      <view class="title {{tabType == 'recommend'?'hover_color':''}}" bindtap='changeTab' data-type="recommend">
+        推荐
+        <view class='bottom_line' wx:if="{{tabType == 'recommend'}}"></view>
+      </view>
+    </view>
+    <!-- 目录 -->
+    <view class='catalog_main' wx:if="{{tabType == 'list'}}">
+      <!-- 倒序 -->
+      <view class='order_box' wx:if="{{pageData.list && pageData.list.length > 0}}">
+        <view class='order_main' bindtap='changeOrder'>
+          {{orderText}}<image src="../../images/courseDetails/order.png" class='order_icon'></image>
+        </view>
+      </view>
+      <!-- 资源 -->
+      <view class='catalog_list' wx:for="{{pageData.list}}" bindtap='resourceDet' 
+        data-type="{{item.types}}" data-id="{{item.id}}">
+        <view class='catalog_name'>
+          <view class="catalog_text {{item.messageCode?'lock_style': pageData.newVideoId == item.id?'play_style':''}}">{{item.name}}</view>
+          <image src='../../images/courseDetails/lock.png' class='catalog_play' wx:if="{{item.messageCode}}"></image>
+          <image src='../../images/courseDetails/stop.png' class='catalog_play' wx:elif="{{!item.messageCode && pageData.newVideoId == item.id}}"></image>
+          <image src='../../images/courseDetails/play.png' class='catalog_play' wx:else></image>
+        </view>
+        <view class='catalog_content'>
+          <text class='catalog_timelength'>{{item.timeLength}}</text>
+          <text class='catalog_time'>{{item.strCreateTime}}</text> 
+          <image src='../../images/index/browse.png' class='catalog_browse'></image>
+          <text>{{item.clickNum}}次学习</text>
+          <text class='catalog_click' wx:if="{{!item.messageCode && item.isPlay == 1 && item.schedule!= null && item.schedule>0}}">已播放{{item.schedule}}%</text>
+          <view class='catalog_free' wx:if="{{item.price == 0 && pageData.messageCode != null}}">免费</view>
+        </view>
+      </view>
+      <!-- 暂无 -->
+      <view wx:if="{{!pageData.list || pageData.list.length == 0}}" class="review_nullBox">
+        <image src='../../images/resourceDetails/review.png' class='review_nullIcon'></image>
+        <view class="review_nullText">暂无数据</view>
+      </view>
+    </view>
+    <!-- 详情 -->
+    <view class='detail_main' wx:if="{{tabType == 'detail'}}">
+      <view class='detail_title' wx:if="{{content}}">内容简介</view>
+      <view class='detail_content' wx:if="{{content}}"><rich-text nodes="{{content}}"></rich-text></view>
+      <view class='detail_title'>精选评论
+        <view class='add_review' bindtap='addReview'>
+          <image src='../../images/courseDetails/review.png' class='review_icon'></image>写评论
+        </view>
+      </view>
+      <component reviewData="{{reviewData}}" reviewTotal="{{reviewTotal}}" reviewType="{{reviewType}}" bind:myList="myList" postId="{{listQuery.oid}}" name="{{names}}" listNull="{{listNull}}"/>
+    </view>
+    <!-- 推荐 -->
+    <view class='recommend_main' wx:if="{{tabType == 'recommend'}}">
+      <view class='recommend_title'>相关推荐</view>
+      <view class="series_content" wx:for="{{pageData.recomedLibraryList}}"  wx:key="{{index}}" 
+        bindtap='resourceDetails' data-type="{{item.types}}" data-id="{{item.id}}">
+        <view class="series_cover">
+          <image class='series_img' src="{{urlPath}}?fileName={{item.cover}}" wx:if="{{item.cover}}"></image>
+          <image class='series_img' src='../../images/course/cover.png' wx:else></image>
+        </view>
+        <view class="series_bottom">
+          <view class="series_name">{{item.name}}</view>
+          <view class="series_price">
+            <text class="series_realprice" style='color:#E40000' wx:if="{{item.price>0}}">￥{{item.price}}</text>
+            <text wx:else style='color:#0AB562'>免费</text>
+            <text class="series_lineprice" wx:if="{{item.linePrice}}">￥{{item.linePrice}}</text>
+          </view>
+          <view class='series_main'>
+            <view class="series_periods" wx:if="{{item.types == 3}}">
+              <image src="../../images/common/chapter.png" class="browse_icon"></image>
+              已更新{{item.updatePeriods}}节
+            </view>
+            <view class="series_browse">
+              <image src="../../images/index/browse.png" class="browse_icon"></image>
+              {{item.clickNum}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="review_nullBox" wx:if="{{!pageData.recomedLibraryList || pageData.recomedLibraryList.length == 0}}">
+        <image src='../../images/resourceDetails/review.png' class='review_nullIcon'></image>
+        <view class="review_nullText">暂无推荐</view>
+      </view>
+    </view>
+  </view>
+  <view class="{{isIphoneX?'course_bottom':'course_btn'}}">
+    <!-- 购买 -->
+    <view class='bottom_btn' wx:if="{{pageData.messageCode}}">
+      <view class='try_btn' bindtap='tryBtn'>
+        <image src='../../images/courseDetails/try.png' class='try_icon'></image>
+        试听
+      </view>
+      <!-- <view class='pay_btn' bindtap='wxLogin' wx:if="{{ifLogin}}">
+        <button class="wxBtn" wx:if="{{phone}}">
+          <image src='../../images/courseDetails/pay.png' class='pay_ico'></image>立即支付
+        </button>
+        <button class="wxBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:else>
+          <image src='../../images/courseDetails/pay.png' class='pay_ico'></image>立即支付
+        </button>
+      </view> -->
+      <!-- 去登录页 -->
+      <view class='pay_btn' bindtap='payBtn'>
+        <image src='../../images/courseDetails/pay.png' class='pay_icon'></image>立即支付
+      </view>
+    </view>
+    <!-- 有权限 -->
+    <view class='recommend_bottom' bindtap='recommendBtn' wx:else>
+      <image src='../../images/courseDetails/study.png' class='recommend_bottom_icon'></image>开始学习
+    </view>
+  </view>
+  <!-- 分享功能 -->
+  <view class="share_box" hidden="{{!shareDialog}}">
+    <!-- <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%"> -->
+      <!-- <view class="scroll_view_item"> -->
+        <view class="share_main">
+          <canvas canvas-id="myCanvas" style="width:270px;height:450px;margin:0 auto;" bindlongtap="savePost" data-type="myCanvas"></canvas>
+        </view>
+      <!-- </view> -->
+      <!-- <view class="scroll_view_item">
+        <view class="share_main">
+          <canvas canvas-id="myCanvasSec" style="width:270px;height:450px;margin:0 auto;" bindlongtap="savePost" data-type="myCanvasSec"></canvas>
+        </view>
+      </view>
+      <view class="scroll_view_item">
+        <view class="share_main">
+          <canvas canvas-id="myCanvasThird" style="width:270px;height:450px;margin:0 auto;" bindlongtap="savePost" data-type="myCanvasThird"></canvas>
+        </view>
+      </view>
+    </scroll-view> -->
+    <view class="canvas_text" >长按图片保存或发送给朋友</view>
+    <view class="canvas_image">
+     <image src='../../images/common/delete_icon.png' class="delete_icon" bindtap="closeShare"></image>
+    </view>
+  </view>
+</view>

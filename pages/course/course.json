@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "课程",
+  "navigationBarBackgroundColor": "#1A6FEE",
+  "navigationBarTextStyle": "white",
+  "component": true,
+  "usingComponents": {
+    "titleBox": "../../components/title/title"
+  }
+}

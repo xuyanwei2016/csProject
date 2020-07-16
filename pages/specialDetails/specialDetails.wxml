@@ -1,0 +1,23 @@
+<view class="special_details">
+  <view class="subject_cover"><image src='{{urlPath}}?fileName={{specialForm.appBgImg}}' class="subject_icon"></image></view>
+  <view class="special_main">
+    <view class="special_name">{{specialForm.name}}</view>
+    <view class="special_intro"><rich-text nodes="{{specialForm.content}}"></rich-text></view>
+  </view>
+    <view class="special_bottom" >
+      <view class="special_bottom_list" wx:for="{{smallList}}" wx:key="{{item.index}}" wx:if="{{item.resouresClass==2}}" bindtap="toClass" data-id="{{item.resouresId}}">
+        <image class="special_bottom_img" wx:if="{{item.img}}" src="{{urlPath}}?fileName={{item.img}}">
+        </image>
+        <image class="special_bottom_img" wx:else src="{{imagePath}}{{item.imgPath}}/1.jpg"></image>
+        <view class="special_bottom_comm">
+          <view class="special_bottom_name">{{item.resouresName}}</view>
+          <view class="special_bottom_syno" wx:if="{{item.synopsis}}">{{item.synopsis}}</view>
+          <view class="special_bottom_syno" wx:else></view>
+          <view class="special_bottom_brow">
+            <image class="special_bottom_eye" src="../../images/common/browser.png"></image>
+            <text class="special_bottom_browText">{{item.browseNum}}人学习过</text>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<view class='labelDetails'>
+  <component pageList="{{resourceList}}"  isLast="{{isLast}}" isNull="{{isNull}}"/>
+</view>

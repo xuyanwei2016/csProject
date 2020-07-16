@@ -1,0 +1,67 @@
+/* pages/label/label.wxss */
+page{
+  height:100%;
+  width: 100%;
+  border-top: solid 1px #EEEEEE;
+}
+.label{
+  padding: 0 24rpx 30rpx;
+  background:#f7f7f7;
+  overflow: hidden;
+}
+.label_list{
+  width: 40%;
+  background:#fff;
+  overflow: hidden;
+  padding: 0 4%;
+  margin-top: 30rpx;
+  float: left;
+  display: flex;
+  height: 166rpx;
+}
+.label_list:nth-child(2n+1){
+  margin-right: 4%;
+}
+.label_img{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 24rpx;
+  margin-top: 43rpx;
+}
+.label_words{
+  flex: 1;
+  height:100%;
+  overflow:hidden;
+  display:flex;
+  display:-ms-flexbox;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.label_words_text01{
+  font-size:14px;
+  color:#202021;
+  font-weight:bold;
+  line-height:40rpx;
+  margin-bottom: 8rpx;
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  width: 100%;
+}
+.label_words_text02{
+  font-size:12px;
+  color:#C8CAD2;
+  font-weight:500;
+  white-space: normal;
+  overflow: hidden;
+  width: 100%;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+}
